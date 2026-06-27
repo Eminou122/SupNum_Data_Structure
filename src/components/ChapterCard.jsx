@@ -16,10 +16,10 @@ export default function ChapterCard({ chapter }) {
 
       {isActive ? (
         <a
-          href="#roadmap"
+          href={`#/${chapter.slug}`}
           className="mt-6 inline-flex w-fit rounded-lg border-[3px] border-ink bg-success px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
         >
-          Actif
+          Commencer →
         </a>
       ) : (
         <span className="mt-6 inline-flex w-fit rounded-lg border-[3px] border-ink bg-paper px-4 py-2 font-mono text-sm font-black">

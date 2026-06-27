@@ -1,5 +1,10 @@
+import { useState, useEffect } from 'react'
 import ChapterCard from './components/ChapterCard.jsx'
+import ChapterViewer from './components/ChapterViewer.jsx'
 import { chapters } from './data/chapters.js'
+import { chapter3 } from './data/chapter3.js'
+
+const CHAPTER_ROUTES = { 'chapitre-3-tris': chapter3 }
 
 const navItems = ['Accueil', 'Cours', 'TD/TP', 'Examens']
 const reasons = [
@@ -13,7 +18,23 @@ const roadmap = [
   ['Phase 3', 'Examens corrigés', 'Bientôt'],
 ]
 
+function getSlugFromHash() {
+  const match = window.location.hash.match(/^#\/(.+)$/)
+  return match ? match[1] : null
+}
+
 export default function App() {
+  const [slug, setSlug] = useState(getSlugFromHash)
+
+  useEffect(() => {
+    const onHash = () => setSlug(getSlugFromHash())
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+
+  const chapter = slug ? CHAPTER_ROUTES[slug] : null
+  if (chapter) return <ChapterViewer chapter={chapter} />
+
   return (
     <div className="min-h-screen bg-paper text-ink">
       <header className="sticky top-0 z-10 border-b-[3px] border-ink bg-paper/95 backdrop-blur">
@@ -67,7 +88,7 @@ export default function App() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#chapitres"
+                href="#/chapitre-3-tris"
                 className="rounded-xl border-[3px] border-ink bg-success px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
               >
                 Commencer avec les tris

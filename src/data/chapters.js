@@ -13,6 +13,7 @@ export const chapters = [
     number: 'Chapitre 3',
     title: 'Algorithmes de tri',
     status: 'actif',
+    slug: 'chapitre-3-tris',
   },
   {
     number: 'Chapitre 4',

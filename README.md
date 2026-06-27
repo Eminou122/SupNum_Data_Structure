@@ -18,7 +18,16 @@ npm run dev
 
 ## Current gate
 
-Gate 1: design system and homepage.
+Gate 2: chapter viewer + Chapter 3 content (algorithmes de tri).
+
+- Hash-based routing (`#/chapitre-3-tris`) — no router dependency
+- Chapter 3 content: sélection, insertion, bulles, fusion
+- Primary CTA and Chapter 3 card both navigate to the chapter viewer
+- Back/home navigation from chapter viewer
+
+## Public URL
+
+https://supnum-data-structure.vercel.app
 
 ## Repository
 
@@ -30,13 +39,10 @@ Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 
 ## Intentionally not built yet
 
-- Backend
-- Database
-- Authentication
-- Chapter viewer
-- Sorting visualizer
+- Sorting visualizer (Gate 3)
 - Quiz system
 - TD/TP logic
 - Exam logic
+- Backend / Database / Authentication
 - Dashboard
 - Dark mode
