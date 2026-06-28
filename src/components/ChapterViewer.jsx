@@ -1,3 +1,5 @@
+import SortingRace from './SortingRace.jsx'
+
 export default function ChapterViewer({ chapter }) {
   return (
     <div className="min-h-screen bg-paper text-ink">
@@ -53,6 +55,12 @@ export default function ChapterViewer({ chapter }) {
             <Section key={section.id} section={section} />
           ))}
         </div>
+
+        {chapter.hasSortingRace && (
+          <div className="mt-8">
+            <SortingRace />
+          </div>
+        )}
 
         <div className="mt-12 flex justify-center">
           <a

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import ChapterCard from './components/ChapterCard.jsx'
 import ChapterViewer from './components/ChapterViewer.jsx'
+import SortingRace from './components/SortingRace.jsx'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 
@@ -37,6 +38,7 @@ export default function App() {
 
   const chapter = slug ? CHAPTER_ROUTES[slug] : null
   if (chapter) return <ChapterViewer chapter={chapter} />
+  if (slug === 'playground') return <PlaygroundPage />
 
   return (
     <div className="min-h-screen bg-paper text-ink">
@@ -49,27 +51,33 @@ export default function App() {
             SupAlgo
           </a>
           <div className="flex flex-wrap justify-end gap-2">
-            {navItems.map((item, index) => (
-              index < 2 ? (
-                <a
-                  key={item}
-                  href={index === 0 ? '#accueil' : '#chapitres'}
-                  className={`rounded-lg border-[3px] border-ink px-3 py-2 font-mono text-sm font-black outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4 ${
-                    index === 0 ? 'bg-accent shadow-hardSm' : 'bg-white'
-                  }`}
-                >
-                  {item}
-                </a>
-              ) : (
-                <button
-                  key={item}
-                  type="button"
-                  disabled
-                  className="cursor-not-allowed rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black opacity-60 sm:px-4"
-                >
-                  {item}
-                </button>
-              )
+            <a
+              href="#accueil"
+              className="rounded-lg border-[3px] border-ink bg-accent px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              Accueil
+            </a>
+            <a
+              href="#chapitres"
+              className="rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              Cours
+            </a>
+            <a
+              href="#/playground"
+              className="rounded-lg border-[3px] border-ink bg-coral px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              Playground
+            </a>
+            {navItems.slice(2).map((item) => (
+              <button
+                key={item}
+                type="button"
+                disabled
+                className="cursor-not-allowed rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black opacity-60 sm:px-4"
+              >
+                {item}
+              </button>
             ))}
           </div>
         </nav>
@@ -101,6 +109,12 @@ export default function App() {
                 className="rounded-xl border-[3px] border-ink bg-white px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
               >
                 Voir le programme
+              </a>
+              <a
+                href="#/playground"
+                className="rounded-xl border-[3px] border-ink bg-coral px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
+              >
+                Playground interactif
               </a>
             </div>
           </div>
@@ -174,6 +188,61 @@ export default function App() {
 
       <footer className="border-t-[3px] border-ink bg-ink px-4 py-8 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 font-mono font-black sm:flex-row sm:items-center sm:justify-between">
+          <p>SupNum Data Structure Demo</p>
+          <p>Frontend-only MVP</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+function PlaygroundPage() {
+  return (
+    <div className="min-h-screen bg-paper text-ink">
+      <header className="sticky top-0 z-10 border-b-[3px] border-ink bg-paper/95 backdrop-blur">
+        <nav className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+          <a
+            href="#accueil"
+            className="rounded-lg border-[3px] border-ink bg-primary px-4 py-2 font-mono text-xl font-black text-white shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-accent"
+          >
+            SupAlgo
+          </a>
+          <a
+            href="#accueil"
+            className="rounded-lg border-[3px] border-ink bg-white px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+          >
+            ← Accueil
+          </a>
+        </nav>
+      </header>
+
+      <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mb-8">
+          <span className="inline-flex rounded-full border-[3px] border-ink bg-coral px-4 py-2 font-mono text-sm font-black shadow-hardSm">
+            Playground interactif
+          </span>
+          <h1 className="mt-4 font-mono text-4xl font-black leading-tight sm:text-5xl">
+            Playground interactif
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg font-semibold leading-8">
+            Expérimente les algorithmes de tri directement dans le navigateur.
+          </p>
+        </div>
+
+        <SortingRace />
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="#accueil"
+            className="rounded-xl border-[3px] border-ink bg-white px-6 py-4 font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
+          >
+            ← Retour à l'accueil
+          </a>
+        </div>
+      </main>
+
+      <footer className="mt-12 border-t-[3px] border-ink bg-ink px-4 py-8 text-white">
+        <div className="mx-auto flex max-w-4xl flex-col gap-2 font-mono font-black sm:flex-row sm:items-center sm:justify-between">
           <p>SupNum Data Structure Demo</p>
           <p>Frontend-only MVP</p>
         </div>

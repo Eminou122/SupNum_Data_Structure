@@ -1,6 +1,7 @@
 export const chapter3 = {
   number: 'Chapitre 3',
   title: 'Algorithmes de tri',
+  hasSortingRace: true,
   intro:
     "Le tri, c'est l'art de mettre les choses dans le bon ordre. Sans tri, chercher un contact dans ton téléphone serait une aventure aléatoire. Avec un bon algorithme de tri, c'est O(log n) avec une recherche binaire. Autant dire : la nuit et le jour.",
   sections: [
@@ -151,10 +152,9 @@ export const chapter3 = {
       id: 'suite',
       heading: 'La suite',
       explanation:
-        "Tu connais maintenant les tris fondamentaux, leurs complexités, et leurs compromis. La prochaine étape : les voir en action côte à côte, pour vraiment sentir pourquoi O(n log n) écrase O(n²).",
+        "Tu connais maintenant les tris fondamentaux, leurs complexités, et leurs compromis. Essaie maintenant la course visuelle ci-dessous pour comparer O(n²) et O(n log n).",
       isCallout: true,
-      calloutText:
-        'Gate 3 ajoutera la course visuelle entre les algorithmes.',
+      calloutText: 'Race interactive ci-dessous — démarre la course !',
     },
   ],
 }

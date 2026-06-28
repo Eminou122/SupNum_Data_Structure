@@ -18,12 +18,26 @@ npm run dev
 
 ## Current gate
 
-Gate 2: chapter viewer + Chapter 3 content (algorithmes de tri).
+Gate 3: interactive sorting race visualizer.
 
-- Hash-based routing (`#/chapitre-3-tris`) — no router dependency
+- Interactive sorting race: bubble sort vs merge sort (`La Course des Algorithmes`)
+- Hash-based routing (`#/chapitre-3-tris`, `#/playground`) — no router dependency
 - Chapter 3 content: sélection, insertion, bulles, fusion
-- Primary CTA and Chapter 3 card both navigate to the chapter viewer
-- Back/home navigation from chapter viewer
+- SortingRace embedded in Chapter 3 and at `#/playground`
+- Playground nav link in header and homepage CTA
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+- Homepage: `http://localhost:5173`
+- Chapter 3: `http://localhost:5173/#/chapitre-3-tris`
+- Playground: `http://localhost:5173/#/playground`
 
 ## Public URL
 
@@ -37,9 +51,8 @@ https://github.com/Eminou122/SupNum_Data_Structure
 
 Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 
-## Intentionally not built yet
+## Intentionally not built
 
-- Sorting visualizer (Gate 3)
 - Quiz system
 - TD/TP logic
 - Exam logic
