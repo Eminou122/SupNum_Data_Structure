@@ -74,16 +74,39 @@ function TdTpCard({ item, expanded, onToggle }) {
         </div>
 
         <div className="mt-3 flex flex-wrap gap-2 font-mono text-xs">
-          <span className="rounded border-2 border-ink/30 px-2 py-0.5 text-ink/50">
-            Source : {item.sourceFile}
-          </span>
-          {item.attachments.map((a) => (
-            <span
-              key={a.filename}
-              className="rounded border-2 border-ink bg-paper px-2 py-0.5 font-bold"
+          {item.sourceUrl ? (
+            <a
+              href={item.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded border-2 border-ink bg-accent px-2 py-0.5 font-bold transition hover:bg-primary hover:text-white"
             >
-              Squelette {a.language}
+              Ouvrir le PDF
+            </a>
+          ) : (
+            <span className="rounded border-2 border-ink/30 px-2 py-0.5 text-ink/50">
+              Source : {item.sourceFile}
             </span>
+          )}
+          {item.attachments.map((a) => (
+            a.url ? (
+              <a
+                key={a.filename}
+                href={a.url}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded border-2 border-ink bg-paper px-2 py-0.5 font-bold transition hover:bg-primary hover:text-white"
+              >
+                Télécharger le squelette {a.language}
+              </a>
+            ) : (
+              <span
+                key={a.filename}
+                className="rounded border-2 border-ink bg-paper px-2 py-0.5 font-bold"
+              >
+                Squelette {a.language}
+              </span>
+            )
           ))}
         </div>
 
@@ -146,15 +169,26 @@ function TdTpCard({ item, expanded, onToggle }) {
                 {item.attachments.map((a) => (
                   <li
                     key={a.filename}
-                    className="flex items-center justify-between rounded-lg border-[3px] border-ink bg-white p-3"
+                    className="flex items-center justify-between gap-3 rounded-lg border-[3px] border-ink bg-white p-3"
                   >
                     <div>
                       <p className="font-mono text-sm font-black">{a.filename}</p>
                       <p className="font-mono text-xs text-ink/50">{a.label} • {a.language}</p>
                     </div>
-                    <span className="rounded-md border-2 border-ink/30 px-3 py-1.5 font-mono text-xs font-bold text-ink/40">
-                      Téléchargement bientôt disponible
-                    </span>
+                    {a.url ? (
+                      <a
+                        href={a.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-md border-[3px] border-ink bg-accent px-3 py-1.5 font-mono text-xs font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+                      >
+                        Télécharger le squelette
+                      </a>
+                    ) : (
+                      <span className="rounded-md border-2 border-ink/30 px-3 py-1.5 font-mono text-xs font-bold text-ink/40">
+                        Bientôt disponible
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>

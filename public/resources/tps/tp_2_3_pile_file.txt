@@ -1,0 +1,227 @@
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+typedef struct Place Place;
+
+struct Place{
+	int val;
+	Place * suiv;
+};
+typedef Place * Pile;
+
+//-------------Les piles par LSC--------------
+
+Pile estVide(){
+	return NULL;
+}
+
+Pile empiler(Pile P, int e){
+	Pile Q = new Place;
+	if(Q == NULL){
+		cout<<"Erreur d'allocation !!";
+	}
+	Q->val = e;
+	Q->suiv = P;
+	P = Q;
+	return P;
+	
+}
+
+Pile depiler(Pile P){
+	Pile temp = P;
+	if(temp == NULL){
+		cout<<"Pile vide !!";
+	}
+	P = P->suiv;
+	return P;
+}
+int sommet(Pile P){
+	if(P == NULL){
+		cout<<"Pile vide !!";
+	}
+	return P->val;
+}
+
+void affichier(Pile P){
+	Pile temp = P;
+	if(temp == NULL){
+		cout<<"Pile vide !!";
+	}
+	while(temp != NULL){
+		cout<<temp->val<<endl;
+		temp = temp->suiv;
+	}
+}
+
+
+
+//-------------Les files par LSC--------------
+
+typedef struct File File;
+
+struct File {
+	Place *  debut;
+	Place * fin;
+};
+
+File fileVide(){
+	File F;
+	F.debut = NULL;
+	F.fin = NULL;
+	return F;
+}
+
+
+File  enfiler(File  F, int e){
+	Place * f = new  Place;
+	f->val = e;
+	f->suiv = NULL;
+	if(F.debut == NULL){
+		F.debut = f;
+		F.fin = f;
+		return F;
+	}
+	(F.fin)->suiv = f;
+	F.fin = f;
+	return F;
+	
+}
+
+File defiler(File F){
+	File temp = F;
+	if(temp.debut == NULL){
+		cout<<"La file est vide "<<endl;
+	}
+	F.debut = (F.debut)->suiv;
+	return F;
+}
+
+int premier(File F){
+	if(F.debut == NULL){
+		cout<<"La file est vide"<<endl;
+	}
+	return (F.debut)->val;
+}
+
+void affichage(File  F){
+	Place * temp = F.debut;
+	if(F.debut == NULL){
+		cout<<"hfdskjhghd";
+	}
+	else{
+		while(temp!=NULL){
+			cout<<temp->val<<endl;
+			temp = temp->suiv;
+		}
+	}
+}
+
+File * filevide(){
+	return NULL;
+}
+
+//-------------Les piles par tableau--------------
+
+struct PileAcce{
+	int n;
+	int T[50];
+};
+
+PileAcce pileVide(){
+	 PileAcce p;
+	 p.n=0 ;
+	 return p;
+}
+bool estVide(PileAcce P){
+	return P.n == 0;
+}
+bool pleinne(PileAcce P){
+	return P.n == 49;
+}
+
+int sommet(PileAcce P){
+	if(estVide(P)){
+		cout<<"La pile est vide !!"<<endl;
+	}else{
+		return P.T[P.n-1];
+	}
+}
+
+PileAcce empiler(PileAcce P, int e){
+	if(pleinne(P)){
+		cout<<"La pile est pleinne !!"<<endl;
+	}else{
+		int n = P.n++;
+		P.T[n] = e;	
+		return P;
+	}
+	
+}
+
+PileAcce depiler(PileAcce P){
+	if(estVide(P)){
+		cout<<"La pile est vide !!"<<endl;	
+	}else{
+		P.n = P.n-1;
+		return P;
+	}
+}
+
+void affichier(PileAcce P){
+	if(estVide(P)){
+		cout<<"La pile est vide !!"<<endl;
+	}else{
+		for(int i=0; i<P.n; i++){
+		cout<<P.T[i]<<endl;
+		}	
+	}	
+}
+
+
+int main(int argc, char** argv) {
+	cout<<"\n-------------Les piles par LSC--------------\n";
+	Pile P = estVide();
+	P = empiler(P, 6);
+	P = empiler(P, 3);
+	P = empiler(P, 7);
+	affichier(P);
+	cout<<"\n Depiler\n";
+	P = depiler(P);
+	affichier(P);
+	cout<<"\n Le sommet :\n";
+	cout<<sommet(P)<<endl;
+	
+	
+	cout<<"-------------Les files par LSC--------------\n";
+	
+	File  F = fileVide();
+	
+	F = enfiler(F,3);
+	F = enfiler(F,8);
+	F = enfiler(F,4);
+	
+	affichage(F);
+	cout<<"\n Enfiler \n";
+	F = defiler(F);
+	affichage(F);
+	cout<<"\n Le premiere est :\n";
+	cout<<premier(F)<<endl;
+	
+	cout<<"-------------Les piles par tableau--------------\n";
+	
+	PileAcce P1 = pileVide();
+	P1 = empiler(P1, 2);
+	P1 = empiler(P1, 3);
+	P1 = empiler(P1, 4);	
+	P1 = empiler(P1, 5);	
+	affichier(P1);
+	cout<<"\n Depiler\n";
+	P1 = depiler(P1);
+	affichier(P1);
+	cout<<"\n Le sommet :\n";
+	cout<<sommet(P1);
+
+	return 0;
+}
+

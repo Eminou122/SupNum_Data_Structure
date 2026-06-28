@@ -9,24 +9,48 @@ Interactive demo website for SupNum second-year students learning data structure
 - Tailwind CSS
 - Frontend-only static deployment
 
-## Demo status
+## Current version
 
-Ready for presentation as a frontend-only MVP.
+`v1.1.0-resources-downloads`
 
-## Current gate
+## Public URL
 
-Gate 7: final polish.
+https://supnum-data-structure.vercel.app
 
-### Features
+Resources are served statically by Vercel from the `public/resources` folder.
 
-- **Homepage**: roadmap, course cards, "Pourquoi ce site ?"
+## Features
+
+- **Homepage**: roadmap, course cards, CTA to resources — `#accueil`
 - **Chapter 3 course viewer**: interactive sorting chapter with Big-O explanations — `#/chapitre-3-tris`
-- **SortingRace visualizer**: bubble sort vs merge sort, adjustable size — `#/playground`
+- **SortingRace visualizer**: bubble sort vs merge sort, adjustable size
 - **Chapter 3 quiz**: 10 questions in French, immediate feedback with explanations
 - **Playground**: standalone SortingRace page — `#/playground`
-- **Real TD/TP catalog**: 6 items, filters, expandable cards with C++ skeleton previews — `#/td-tp`
-- **Examens placeholder**: honest coming-soon page, no fake content — `#/examens`
+- **Real TD/TP catalog**: 6 items, filters, expandable cards, real download links — `#/td-tp`
+- **Examens placeholder**: honest coming-soon page — `#/examens`
+- **Resources page**: all course/TD/TP files as direct download links — `#/ressources`
 - Hash-based routing — no router dependency
+
+## Resource folder structure
+
+```
+public/resources/courses/   — Course slides and PDFs (Chapitres 1–4)
+public/resources/tds/       — TD PDFs (TD-01, TD-Revision)
+public/resources/tps/       — TP PDFs and C++ source skeletons
+```
+
+## Filename mapping (renamed for web safety)
+
+| Original | Web-safe name |
+|---|---|
+| `Chapitre2_Complexité.pptx` | `Chapitre2_Complexite.pptx` |
+| `Chapitre2_Complexité_Khadhraoui.pdf` | `Chapitre2_Complexite_Khadhraoui.pdf` |
+| `Chapitre3_Algorithmes de tri_KHADHRAOUI.pdf` | `Chapitre3_Algorithmes-de-tri_KHADHRAOUI.pdf` |
+| `Chapitre4_Pointeurs et Structures de données_Khadhraoui.pdf` | `Chapitre4_Pointeurs-et-Structures-de-donnees_Khadhraoui.pdf` |
+| `Chapitre4_Pointeurs et Structures de données_partie1_Khadhraoui.pdf` | `Chapitre4_Pointeurs-et-Structures-de-donnees_partie1_Khadhraoui.pdf` |
+| `TD-Révision.pdf` | `TD-Revision.pdf` |
+| `TP 1.pdf` | `TP-1.pdf` |
+| `listechaine.txt.txt` | `listechaine.txt` |
 
 ## Run locally
 
@@ -42,10 +66,7 @@ Open `http://localhost:5173` in your browser.
 - Playground: `http://localhost:5173/#/playground`
 - TD/TP: `http://localhost:5173/#/td-tp`
 - Examens: `http://localhost:5173/#/examens`
-
-## Public URL
-
-https://supnum-data-structure.vercel.app
+- Resources: `http://localhost:5173/#/ressources`
 
 ## Repository
 
@@ -57,12 +78,11 @@ Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 
 ## Intentionally not built
 
-- Real exam questions / correction engine / automatic grading
-- Timer mode / score system
-- Real downloadable file handling
-- Code runner / compiler
 - Backend / Database / Authentication
+- Upload system / Google Drive integration
+- PDF parser / embedded PDF viewer
+- Correction engine / exam questions
+- Code runner / compiler
 - Dashboard
 - Dark mode
-- PDF viewer or parser
 - Fake solutions or model answers

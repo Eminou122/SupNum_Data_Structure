@@ -29,6 +29,7 @@ export const tdtpItems = [
       'Implémenter une pile et une file avec tableau ou liste.',
     ],
     sourceFile: 'TD-01.pdf',
+    sourceUrl: '/resources/tds/TD-01.pdf',
     attachments: [],
     codePreview: null,
     status: 'available',
@@ -57,6 +58,7 @@ export const tdtpItems = [
       'Trier le tableau fusionné avec le tri par insertion.',
     ],
     sourceFile: 'TD-Révision.pdf',
+    sourceUrl: '/resources/tds/TD-Revision.pdf',
     attachments: [],
     codePreview: null,
     status: 'available',
@@ -84,7 +86,8 @@ export const tdtpItems = [
       'Vérifier l\'exemple : L = {1,2}, R = {5,8,9,10}, Q = {1,5,2,8,9,10}.',
     ],
     sourceFile: 'TP 1.pdf',
-    attachments: [{ filename: 'listechaine.txt', language: 'C++', label: 'Squelette de liste chaînée' }],
+    sourceUrl: '/resources/tps/TP-1.pdf',
+    attachments: [{ filename: 'listechaine.txt', url: '/resources/tps/listechaine.txt', language: 'C++', label: 'Squelette de liste chaînée' }],
     codePreview: `#include <iostream>
 using namespace std;
 
@@ -135,7 +138,8 @@ void ajouFin(Liste& L, int v) {
       'Vérifier les opérations empiler, depiler, sommet, enfiler, defiler, premier.',
     ],
     sourceFile: 'tp_2_3_pile_file.txt',
-    attachments: [{ filename: 'tp_2_3_pile_file.txt', language: 'C++', label: 'Squelette piles & files' }],
+    sourceUrl: '/resources/tps/tp_2_3_pile_file.txt',
+    attachments: [{ filename: 'tp_2_3_pile_file.txt', url: '/resources/tps/tp_2_3_pile_file.txt', language: 'C++', label: 'Squelette piles & files' }],
     codePreview: `#include <iostream>
 using namespace std;
 
@@ -191,7 +195,8 @@ void depiler(Pile& P) {
       'Reporter le temps d\'exécution et analyser les problèmes.',
     ],
     sourceFile: 'sourceTri.txt',
-    attachments: [{ filename: 'sourceTri.txt', language: 'C++', label: 'Source tri sur fichiers' }],
+    sourceUrl: '/resources/tps/sourceTri.txt',
+    attachments: [{ filename: 'sourceTri.txt', url: '/resources/tps/sourceTri.txt', language: 'C++', label: 'Source tri sur fichiers' }],
     codePreview: `#include <iostream>
 #include <fstream>
 #include <ctime>

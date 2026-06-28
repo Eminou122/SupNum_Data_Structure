@@ -1,0 +1,138 @@
+#include <iostream>
+
+
+
+struct place{
+	int val;
+	struct place * suiv;
+};
+typedef  struct place Place;
+typedef Place * Liste;
+
+Liste listeVide(){
+	return NULL;
+}
+
+Liste cons(Liste l, int e){
+	Liste temp = new Place;
+	if(temp == NULL){
+		printf("erreur d''allocation memmoire\n");
+		exit(1);
+	}
+	temp->val = e;
+	temp->suiv = l;
+	l = temp;
+	return l;
+}
+Liste ajouFin(Liste l, int e){
+	Liste temp = new Place;
+	if(temp == NULL){
+		printf("erreur d''allocation memmoire\n");
+		exit(1);
+	}
+	temp->val = e;
+	temp->suiv = NULL;
+	if(l == NULL)
+	  return temp;
+	Liste l1 = l;
+//	compléter ici while(
+//	l1->suiv = completer ici;
+	return l;
+}
+void afficher(Liste l){
+	Liste temp = l;
+	while(temp !=NULL){
+		printf("%d ",temp->val);
+		// completer ici pour parcourir correctement la liste
+	}
+	printf("\n");
+}
+void menu(){
+	printf("1-insertion successive\n ");
+	printf("2- Ajout à la fin \n");
+	printf("3- Affichage\n");
+	printf("4- sortir\n");
+}
+
+int main(int argc, char *argv[]) {
+	printf("***********Gestion des listes ********************\n");
+	int e;
+	int choix;
+	Liste l= listeVide();
+	printf("***********Remplir la liste l1 ********************\n");
+	menu();
+	printf("Votre choix : ");
+	scanf("%d", &choix);
+	while(choix !=4){
+		switch(choix){
+			case 1 : 
+				printf("Donner un entier (-1 pour terminer) :");
+				scanf("%d", &e);
+				while(e != -1){
+					l= cons(l,e);
+					printf("Donner un entier (-1 pour terminer) :");
+	    			scanf("%d", &e);
+				}
+				break;
+			case 2 :
+					printf("Donner un entier  :");
+	    			scanf("%d", &e);
+	    			l = ajouFin(l,e);
+	    			break;
+			case 3:
+				printf("*********** Voila les elments ****** \n");
+	            afficher(l);
+			default : 
+				printf("choix invalide \n ");
+		}
+		menu();
+ 	    printf("Votre choix : ");
+	    scanf("%d", &choix);
+	
+	}
+
+Liste R= listeVide();
+	printf("***********Remplir la liste l2 ********************\n");
+	menu();
+	printf("Votre choix : ");
+	scanf("%d", &choix);
+	while(choix !=4){
+		switch(choix){
+			case 1 : 
+				printf("Donner un entier (-1 pour terminer) :");
+				scanf("%d", &e);
+				while(e != -1){
+					R= cons(R,e);
+					printf("Donner un entier (-1 pour terminer) :");
+	    			scanf("%d", &e);
+				}
+				break;
+			case 2 :
+					printf("Donner un entier  :");
+	    			scanf("%d", &e);
+	    			R = ajouFin(R,e);
+	    			break;
+			case 3:
+				printf("*********** Voila les elments ****** \n");
+	            afficher(R);
+			default : 
+				printf("choix invalide \n ");
+		}
+		menu();
+ 	    printf("Votre choix : ");
+	    scanf("%d", &choix);
+	
+	}
+	//Problème d'intercalement : ecrire une fonction qui s'appele 
+	// interCal qui prend en paramètres deux lsites chaines et les concaténe par alternane
+	// exemple : L = {1,2}, R = {5,8 , 9,10}  Q= intercal(l,R) = {1,5,2,8,9,10}
+	//commenter les lignes ci-dessous et compiler et exécuter le programme en vériviant  
+	// que le résultat est correct
+	/* Liste Q = interCal(l,R);
+	printf("Les deux listes l1 et l2 :\n ");
+	 afficher(l);
+	 afficher(R);
+	 printf("Resultat  :\n ");
+	 afficher(Q); */
+	return 0;
+}

@@ -4,6 +4,7 @@ import ChapterViewer from './components/ChapterViewer.jsx'
 import SortingRace from './components/SortingRace.jsx'
 import TdTpPage from './components/TdTpPage.jsx'
 import ExamensPage from './components/ExamensPage.jsx'
+import ResourcesPage from './components/ResourcesPage.jsx'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 
@@ -42,6 +43,7 @@ export default function App() {
   if (slug === 'playground') return <PlaygroundPage />
   if (slug === 'td-tp') return <TdTpPage />
   if (slug === 'examens') return <ExamensPage />
+  if (slug === 'ressources') return <ResourcesPage />
 
   return (
     <div className="min-h-screen bg-paper text-ink">
@@ -84,6 +86,12 @@ export default function App() {
             >
               Examens
             </a>
+            <a
+              href="#/ressources"
+              className="rounded-lg border-[3px] border-ink bg-success px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              Ressources
+            </a>
           </div>
         </nav>
       </header>
@@ -120,6 +128,12 @@ export default function App() {
                 className="rounded-xl border-[3px] border-ink bg-coral px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
               >
                 Playground interactif
+              </a>
+              <a
+                href="#/ressources"
+                className="rounded-xl border-[3px] border-ink bg-success px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
+              >
+                Télécharger les supports du cours
               </a>
             </div>
           </div>
