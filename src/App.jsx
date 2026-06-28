@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import ChapterCard from './components/ChapterCard.jsx'
 import ChapterViewer from './components/ChapterViewer.jsx'
 import SortingRace from './components/SortingRace.jsx'
+import TdTpPage from './components/TdTpPage.jsx'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 
@@ -14,7 +15,7 @@ const reasons = [
 ]
 const roadmap = [
   ['Phase 1', 'Cours interactifs', 'En cours'],
-  ['Phase 2', 'TD / TP', 'Bientôt'],
+  ['Phase 2', 'TD / TP', 'Disponible'],
   ['Phase 3', 'Examens corrigés', 'Bientôt'],
 ]
 
@@ -38,6 +39,7 @@ export default function App() {
   const chapter = slug ? CHAPTER_ROUTES[slug] : null
   if (chapter) return <ChapterViewer chapter={chapter} />
   if (slug === 'playground') return <PlaygroundPage />
+  if (slug === 'td-tp') return <TdTpPage />
 
   return (
     <div className="min-h-screen bg-paper text-ink">
@@ -68,16 +70,19 @@ export default function App() {
             >
               Playground
             </a>
-            {['TD/TP', 'Examens'].map((item) => (
-              <button
-                key={item}
-                type="button"
-                disabled
-                className="cursor-not-allowed rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black opacity-60 sm:px-4"
-              >
-                {item}
-              </button>
-            ))}
+            <a
+              href="#/td-tp"
+              className="rounded-lg border-[3px] border-ink bg-success px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              TD/TP
+            </a>
+            <button
+              type="button"
+              disabled
+              className="cursor-not-allowed rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black opacity-60 sm:px-4"
+            >
+              Examens
+            </button>
           </div>
         </nav>
       </header>
