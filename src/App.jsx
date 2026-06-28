@@ -165,6 +165,12 @@ export default function App() {
                 <ChapterCard key={chapter.number} chapter={chapter} />
               ))}
             </div>
+            <p className="mt-4 font-mono text-sm text-white/80">
+              Tous les supports sont disponibles dans{' '}
+              <a href="#/ressources" className="underline hover:text-white">
+                Ressources
+              </a>
+            </p>
           </div>
         </section>
 

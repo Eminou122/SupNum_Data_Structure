@@ -11,7 +11,7 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Current version
 
-`v1.1.0-resources-downloads`
+`v1.1.1-course-card-links`
 
 ## Public URL
 
@@ -21,7 +21,7 @@ Resources are served statically by Vercel from the `public/resources` folder.
 
 ## Features
 
-- **Homepage**: roadmap, course cards, CTA to resources — `#accueil`
+- **Homepage**: roadmap, course cards with direct links to available supports, CTA to resources — `#accueil`
 - **Chapter 3 course viewer**: interactive sorting chapter with Big-O explanations — `#/chapitre-3-tris`
 - **SortingRace visualizer**: bubble sort vs merge sort, adjustable size
 - **Chapter 3 quiz**: 10 questions in French, immediate feedback with explanations

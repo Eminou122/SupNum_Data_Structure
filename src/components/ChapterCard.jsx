@@ -1,11 +1,14 @@
 export default function ChapterCard({ chapter }) {
   const isActive = chapter.status === 'actif'
+  const hasSupport = chapter.status === 'support'
 
   return (
     <article
       className={`flex min-h-48 flex-col justify-between rounded-xl border-[3px] border-ink p-5 shadow-hard transition ${
         isActive
           ? 'bg-accent hover:-translate-y-1 focus-within:-translate-y-1'
+          : hasSupport
+          ? 'bg-white hover:-translate-y-0.5 focus-within:-translate-y-0.5'
           : 'bg-white opacity-75'
       }`}
     >
@@ -25,6 +28,15 @@ export default function ChapterCard({ chapter }) {
           className="mt-6 inline-flex w-fit rounded-lg border-[3px] border-ink bg-success px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
         >
           Commencer →
+        </a>
+      ) : hasSupport ? (
+        <a
+          href={chapter.file}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-flex w-fit rounded-lg border-[3px] border-ink bg-paper px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+        >
+          {chapter.fileLabel}
         </a>
       ) : (
         <span className="mt-6 inline-flex w-fit rounded-lg border-[3px] border-ink bg-paper px-4 py-2 font-mono text-sm font-black">
