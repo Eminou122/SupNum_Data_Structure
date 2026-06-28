@@ -1,4 +1,5 @@
 import SortingRace from './SortingRace.jsx'
+import Quiz from './Quiz.jsx'
 
 export default function ChapterViewer({ chapter }) {
   return (
@@ -59,6 +60,12 @@ export default function ChapterViewer({ chapter }) {
         {chapter.hasSortingRace && (
           <div className="mt-8">
             <SortingRace />
+          </div>
+        )}
+
+        {chapter.quiz && (
+          <div className="mt-8">
+            <Quiz title={chapter.quiz.title} questions={chapter.quiz.questions} />
           </div>
         )}
 

@@ -9,22 +9,16 @@ Interactive demo website for SupNum second-year students learning data structure
 - Tailwind CSS
 - Frontend-only static deployment
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
 ## Current gate
 
-Gate 3: interactive sorting race visualizer.
+Gate 4: reusable quiz system + Chapter 3 quiz.
 
+- Reusable quiz system: `src/components/Quiz.jsx` + `src/data/chapter3Quiz.js`
+- Chapter 3 quiz: 10 questions in French, immediate feedback with explanations
 - Interactive sorting race: bubble sort vs merge sort (`La Course des Algorithmes`)
 - Hash-based routing (`#/chapitre-3-tris`, `#/playground`) — no router dependency
 - Chapter 3 content: sélection, insertion, bulles, fusion
-- SortingRace embedded in Chapter 3 and at `#/playground`
-- Playground nav link in header and homepage CTA
+- SortingRace + Quiz embedded in Chapter 3; SortingRace also at `#/playground`
 
 ## Run locally
 
@@ -53,7 +47,6 @@ Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 
 ## Intentionally not built
 
-- Quiz system
 - TD/TP logic
 - Exam logic
 - Backend / Database / Authentication

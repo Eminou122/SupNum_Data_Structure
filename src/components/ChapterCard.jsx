@@ -12,6 +12,11 @@ export default function ChapterCard({ chapter }) {
       <div>
         <p className="font-mono text-sm font-bold uppercase">{chapter.number}</p>
         <h3 className="mt-3 text-2xl font-black leading-tight">{chapter.title}</h3>
+        {chapter.badge && (
+          <span className="mt-2 inline-flex rounded-full border-[3px] border-ink bg-coral px-3 py-1 font-mono text-xs font-black shadow-hardSm">
+            {chapter.badge}
+          </span>
+        )}
       </div>
 
       {isActive ? (

@@ -14,6 +14,7 @@ export const chapters = [
     title: 'Algorithmes de tri',
     status: 'actif',
     slug: 'chapitre-3-tris',
+    badge: 'Quiz disponible',
   },
   {
     number: 'Chapitre 4',

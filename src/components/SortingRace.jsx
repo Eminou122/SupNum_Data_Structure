@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 // --- Algorithm frame precomputation ---
 
@@ -144,10 +144,11 @@ function Lane({ name, badge, frame, status, totalOps }) {
 export default function SortingRace() {
   const [size, setSize] = useState(20)
   const [speedKey, setSpeedKey] = useState('normal')
-  const [initArr, setInitArr] = useState(() => makeArray(20))
-
-  const [bFrames, setBFrames] = useState(() => bubbleFrames(makeArray(20)))
-  const [mFrames, setMFrames] = useState(() => mergeFrames(makeArray(20)))
+  const [race, setRace] = useState(() => {
+    const arr = makeArray(20)
+    return { initArr: arr, bFrames: bubbleFrames(arr), mFrames: mergeFrames(arr) }
+  })
+  const { initArr, bFrames, mFrames } = race
 
   const [bIdx, setBIdx] = useState(0)
   const [mIdx, setMIdx] = useState(0)
@@ -158,18 +159,15 @@ export default function SortingRace() {
   const bTimer = useRef(null)
   const mTimer = useRef(null)
 
-  const clearTimers = useCallback(() => {
+  function clearTimers() {
     clearInterval(bTimer.current)
     clearInterval(mTimer.current)
-  }, [])
+  }
 
-  useEffect(() => () => clearTimers(), [clearTimers])
+  useEffect(() => () => clearTimers(), [])
 
   function buildFromArr(arr) {
-    const bf = bubbleFrames(arr)
-    const mf = mergeFrames(arr)
-    setBFrames(bf)
-    setMFrames(mf)
+    setRace({ initArr: arr, bFrames: bubbleFrames(arr), mFrames: mergeFrames(arr) })
     setBIdx(0)
     setMIdx(0)
   }
@@ -179,9 +177,7 @@ export default function SortingRace() {
     setBStatus('idle')
     setMStatus('idle')
     setShowResult(false)
-    const arr = makeArray(size)
-    setInitArr(arr)
-    buildFromArr(arr)
+    buildFromArr(makeArray(size))
   }
 
   function handleReset() {
@@ -189,8 +185,6 @@ export default function SortingRace() {
     setBStatus('idle')
     setMStatus('idle')
     setShowResult(false)
-    setBIdx(0)
-    setMIdx(0)
     buildFromArr(initArr)
   }
 

@@ -1,7 +1,10 @@
+import { chapter3Quiz } from './chapter3Quiz.js'
+
 export const chapter3 = {
   number: 'Chapitre 3',
   title: 'Algorithmes de tri',
   hasSortingRace: true,
+  quiz: chapter3Quiz,
   intro:
     "Le tri, c'est l'art de mettre les choses dans le bon ordre. Sans tri, chercher un contact dans ton téléphone serait une aventure aléatoire. Avec un bon algorithme de tri, c'est O(log n) avec une recherche binaire. Autant dire : la nuit et le jour.",
   sections: [

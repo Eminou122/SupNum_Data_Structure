@@ -7,7 +7,6 @@ import { chapter3 } from './data/chapter3.js'
 
 const CHAPTER_ROUTES = { 'chapitre-3-tris': chapter3 }
 
-const navItems = ['Accueil', 'Cours', 'TD/TP', 'Examens']
 const reasons = [
   'Voir au lieu de mémoriser',
   'Comprendre Big-O avec des courses',
@@ -69,7 +68,7 @@ export default function App() {
             >
               Playground
             </a>
-            {navItems.slice(2).map((item) => (
+            {['TD/TP', 'Examens'].map((item) => (
               <button
                 key={item}
                 type="button"
