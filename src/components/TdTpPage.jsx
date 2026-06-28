@@ -75,14 +75,14 @@ function TdTpCard({ item, expanded, onToggle }) {
 
         <div className="mt-3 flex flex-wrap gap-2 font-mono text-xs">
           <span className="rounded border-2 border-ink/30 px-2 py-0.5 text-ink/50">
-            📄 {item.sourceFile}
+            Source : {item.sourceFile}
           </span>
           {item.attachments.map((a) => (
             <span
               key={a.filename}
               className="rounded border-2 border-ink bg-paper px-2 py-0.5 font-bold"
             >
-              {'{ }'} {a.language}
+              Squelette {a.language}
             </span>
           ))}
         </div>

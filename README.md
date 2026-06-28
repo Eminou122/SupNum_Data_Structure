@@ -9,25 +9,23 @@ Interactive demo website for SupNum second-year students learning data structure
 - Tailwind CSS
 - Frontend-only static deployment
 
+## Demo status
+
+Ready for presentation as a frontend-only MVP.
+
 ## Current gate
 
-Gate 6: examens placeholder page.
+Gate 7: final polish.
 
 ### Features
 
-- **Examens placeholder**: `src/components/ExamensPage.jsx`
-  - Honest coming-soon page; no fake exam content
-  - Route: `#/examens`
-- **Real TD/TP catalog**: `src/components/TdTpPage.jsx` + `src/data/tdtp.js`
-  - 6 items: 2 TDs + 3 available TPs + 1 coming-soon TP
-  - Filter by type (Tout / TD / TP)
-  - Expandable detail cards with themes, tasks, and C++ code skeleton previews
-  - Route: `#/td-tp`
-- **Chapter 3 viewer**: interactive sorting chapter with Big-O explanations
-  - Route: `#/chapitre-3-tris`
-- **Interactive sorting race**: bubble sort vs merge sort (`La Course des Algorithmes`)
-  - Route: `#/playground`
+- **Homepage**: roadmap, course cards, "Pourquoi ce site ?"
+- **Chapter 3 course viewer**: interactive sorting chapter with Big-O explanations — `#/chapitre-3-tris`
+- **SortingRace visualizer**: bubble sort vs merge sort, adjustable size — `#/playground`
 - **Chapter 3 quiz**: 10 questions in French, immediate feedback with explanations
+- **Playground**: standalone SortingRace page — `#/playground`
+- **Real TD/TP catalog**: 6 items, filters, expandable cards with C++ skeleton previews — `#/td-tp`
+- **Examens placeholder**: honest coming-soon page, no fake content — `#/examens`
 - Hash-based routing — no router dependency
 
 ## Run locally

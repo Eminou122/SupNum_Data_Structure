@@ -84,11 +84,11 @@ export default function ExamensPage() {
               <article
                 key={title}
                 aria-label={`${title} — bientôt disponible`}
-                className="rounded-xl border-[3px] border-ink bg-white p-5 opacity-60 shadow-hard"
+                className="rounded-xl border-[3px] border-ink bg-white p-5 shadow-hard"
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-mono text-lg font-black leading-tight">{title}</h3>
-                  <span className="shrink-0 rounded-md border-[3px] border-ink bg-paper px-2 py-0.5 font-mono text-xs font-black text-ink/50">
+                  <span className="shrink-0 rounded-md border-[3px] border-ink bg-paper px-2 py-0.5 font-mono text-xs font-black text-ink">
                     Bientôt
                   </span>
                 </div>
