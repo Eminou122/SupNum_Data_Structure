@@ -3,6 +3,7 @@ import ChapterCard from './components/ChapterCard.jsx'
 import ChapterViewer from './components/ChapterViewer.jsx'
 import SortingRace from './components/SortingRace.jsx'
 import TdTpPage from './components/TdTpPage.jsx'
+import ExamensPage from './components/ExamensPage.jsx'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 
@@ -40,6 +41,7 @@ export default function App() {
   if (chapter) return <ChapterViewer chapter={chapter} />
   if (slug === 'playground') return <PlaygroundPage />
   if (slug === 'td-tp') return <TdTpPage />
+  if (slug === 'examens') return <ExamensPage />
 
   return (
     <div className="min-h-screen bg-paper text-ink">
@@ -76,13 +78,12 @@ export default function App() {
             >
               TD/TP
             </a>
-            <button
-              type="button"
-              disabled
-              className="cursor-not-allowed rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black opacity-60 sm:px-4"
+            <a
+              href="#/examens"
+              className="rounded-lg border-[3px] border-ink bg-white px-3 py-2 font-mono text-sm font-black outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
             >
               Examens
-            </button>
+            </a>
           </div>
         </nav>
       </header>

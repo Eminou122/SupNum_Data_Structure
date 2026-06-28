@@ -11,19 +11,24 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Current gate
 
-Gate 5: real TD/TP catalog page.
+Gate 6: examens placeholder page.
 
+### Features
+
+- **Examens placeholder**: `src/components/ExamensPage.jsx`
+  - Honest coming-soon page; no fake exam content
+  - Route: `#/examens`
 - **Real TD/TP catalog**: `src/components/TdTpPage.jsx` + `src/data/tdtp.js`
   - 6 items: 2 TDs + 3 available TPs + 1 coming-soon TP
   - Filter by type (Tout / TD / TP)
   - Expandable detail cards with themes, tasks, and C++ code skeleton previews
   - Route: `#/td-tp`
-- Reusable quiz system: `src/components/Quiz.jsx` + `src/data/chapter3Quiz.js`
-- Chapter 3 quiz: 10 questions in French, immediate feedback with explanations
-- Interactive sorting race: bubble sort vs merge sort (`La Course des Algorithmes`)
+- **Chapter 3 viewer**: interactive sorting chapter with Big-O explanations
+  - Route: `#/chapitre-3-tris`
+- **Interactive sorting race**: bubble sort vs merge sort (`La Course des Algorithmes`)
+  - Route: `#/playground`
+- **Chapter 3 quiz**: 10 questions in French, immediate feedback with explanations
 - Hash-based routing — no router dependency
-- Chapter 3 content: sélection, insertion, bulles, fusion
-- SortingRace + Quiz embedded in Chapter 3; SortingRace also at `#/playground`
 
 ## Run locally
 
@@ -38,6 +43,7 @@ Open `http://localhost:5173` in your browser.
 - Chapter 3: `http://localhost:5173/#/chapitre-3-tris`
 - Playground: `http://localhost:5173/#/playground`
 - TD/TP: `http://localhost:5173/#/td-tp`
+- Examens: `http://localhost:5173/#/examens`
 
 ## Public URL
 
@@ -53,10 +59,10 @@ Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 
 ## Intentionally not built
 
-- Correction engine / automatic grading
+- Real exam questions / correction engine / automatic grading
+- Timer mode / score system
 - Real downloadable file handling
 - Code runner / compiler
-- Exam system
 - Backend / Database / Authentication
 - Dashboard
 - Dark mode
