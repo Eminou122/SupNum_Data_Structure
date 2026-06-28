@@ -1,5 +1,6 @@
 import SortingRace from './SortingRace.jsx'
 import Quiz from './Quiz.jsx'
+import PseudoTracer from './PseudoTracer.jsx'
 
 export default function ChapterViewer({ chapter }) {
   return (
@@ -83,7 +84,11 @@ export default function ChapterViewer({ chapter }) {
         )}
 
         {/* ponytail: stubs only — visualizers wired in Gate 9/10/11 */}
-        {chapter.hasPseudoTracer && null}
+        {chapter.hasPseudoTracer && (
+          <div className="mt-8">
+            <PseudoTracer />
+          </div>
+        )}
         {chapter.hasComplexityViz && null}
         {chapter.hasMemoryViz && null}
 
