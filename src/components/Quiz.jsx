@@ -10,7 +10,6 @@ export default function Quiz({ title, questions }) {
   const answered = selected !== null
 
   function handleSelect(idx) {
-    if (answered) return
     setSelected(idx)
     if (idx === q.answerIndex) setScore((s) => s + 1)
   }

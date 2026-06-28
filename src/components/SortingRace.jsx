@@ -228,9 +228,7 @@ export default function SortingRace() {
     setMStatus('idle')
     setShowResult(false)
     setSize(s)
-    const arr = makeArray(s)
-    setInitArr(arr)
-    buildFromArr(arr)
+    buildFromArr(makeArray(s))
   }
 
   const isRunning = bStatus === 'running' || mStatus === 'running'
