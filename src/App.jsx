@@ -7,8 +7,16 @@ import ExamensPage from './components/ExamensPage.jsx'
 import ResourcesPage from './components/ResourcesPage.jsx'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
+import { chapter1 } from './data/chapter1.js'
+import { chapter2 } from './data/chapter2.js'
+import { chapter4 } from './data/chapter4.js'
 
-const CHAPTER_ROUTES = { 'chapitre-3-tris': chapter3 }
+const CHAPTER_ROUTES = {
+  'chapitre-1-intro': chapter1,
+  'chapitre-2-complexite': chapter2,
+  'chapitre-3-tris': chapter3,
+  'chapitre-4-pointeurs-structures': chapter4,
+}
 
 const reasons = [
   'Voir au lieu de mémoriser',

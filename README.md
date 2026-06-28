@@ -9,9 +9,11 @@ Interactive demo website for SupNum second-year students learning data structure
 - Tailwind CSS
 - Frontend-only static deployment
 
-## Current version
+## Current phase
 
-`v1.1.1-course-card-links`
+`v1.2 Gate 8 — interactive chapter routing stubs`
+
+Chapter 1, 2, and 4 routes are now wired through the existing ChapterViewer. Full content will be added in later gates.
 
 ## Public URL
 
@@ -21,10 +23,11 @@ Resources are served statically by Vercel from the `public/resources` folder.
 
 ## Features
 
-- **Homepage**: roadmap, course cards with direct links to available supports, CTA to resources — `#accueil`
-- **Chapter 3 course viewer**: interactive sorting chapter with Big-O explanations — `#/chapitre-3-tris`
-- **SortingRace visualizer**: bubble sort vs merge sort, adjustable size
-- **Chapter 3 quiz**: 10 questions in French, immediate feedback with explanations
+- **Homepage**: roadmap, all four chapter cards active with `Commencer →` — `#accueil`
+- **Chapter 1 stub viewer**: intro + resource link — `#/chapitre-1-intro`
+- **Chapter 2 stub viewer**: intro + resource link — `#/chapitre-2-complexite`
+- **Chapter 3 course viewer**: interactive sorting chapter, Big-O, SortingRace, quiz — `#/chapitre-3-tris`
+- **Chapter 4 stub viewer**: intro + resource link — `#/chapitre-4-pointeurs-structures`
 - **Playground**: standalone SortingRace page — `#/playground`
 - **Real TD/TP catalog**: 6 items, filters, expandable cards, real download links — `#/td-tp`
 - **Examens placeholder**: honest coming-soon page — `#/examens`

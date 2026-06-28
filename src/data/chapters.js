@@ -2,18 +2,16 @@ export const chapters = [
   {
     number: 'Chapitre 1',
     title: 'Introduction & pseudo-code',
-    status: 'support',
-    badge: 'Support disponible',
-    file: '/resources/courses/Chapitre1_Intro.pptx',
-    fileLabel: 'Télécharger',
+    status: 'actif',
+    slug: 'chapitre-1-intro',
+    badge: 'Cours interactif',
   },
   {
     number: 'Chapitre 2',
     title: 'Complexité algorithmique',
-    status: 'support',
-    badge: 'Support disponible',
-    file: '/resources/courses/Chapitre2_Complexite_Khadhraoui.pdf',
-    fileLabel: 'Voir le support',
+    status: 'actif',
+    slug: 'chapitre-2-complexite',
+    badge: 'Cours interactif',
   },
   {
     number: 'Chapitre 3',
@@ -25,9 +23,8 @@ export const chapters = [
   {
     number: 'Chapitre 4',
     title: 'Pointeurs & structures',
-    status: 'support',
-    badge: 'Support disponible',
-    file: '/resources/courses/Chapitre4_Pointeurs-et-Structures-de-donnees_Khadhraoui.pdf',
-    fileLabel: 'Voir le support',
+    status: 'actif',
+    slug: 'chapitre-4-pointeurs-structures',
+    badge: 'Cours interactif',
   },
 ]

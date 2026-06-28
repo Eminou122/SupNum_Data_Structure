@@ -32,36 +32,60 @@ export default function ChapterViewer({ chapter }) {
           <p className="mt-4 max-w-2xl text-lg font-semibold leading-8">
             {chapter.intro}
           </p>
+          {chapter.resourceFile && (
+            <a
+              href={chapter.resourceFile}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex rounded-lg border-[3px] border-ink bg-white px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+            >
+              Télécharger le support original
+            </a>
+          )}
         </div>
 
-        <nav className="mb-10 rounded-xl border-[3px] border-ink bg-white p-5 shadow-hard">
-          <p className="font-mono text-sm font-black uppercase">Sections</p>
-          <ol className="mt-3 grid gap-2 sm:grid-cols-2">
-            {chapter.sections.map((s, i) => (
-              <li key={s.id}>
-                <a
-                  href={`#section-${s.id}`}
-                  className="flex items-start gap-2 rounded-lg border-[3px] border-ink bg-paper px-3 py-2 font-mono text-sm font-black outline-none transition hover:-translate-y-0.5 hover:bg-accent focus-visible:ring-4 focus-visible:ring-primary"
-                >
-                  <span className="shrink-0 text-xs opacity-60">{String(i + 1).padStart(2, '0')}</span>
-                  {s.heading}
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
-
-        <div className="grid gap-8">
-          {chapter.sections.map((section) => (
-            <Section key={section.id} section={section} />
-          ))}
-        </div>
+        {chapter.sections.length > 0 ? (
+          <>
+            <nav className="mb-10 rounded-xl border-[3px] border-ink bg-white p-5 shadow-hard">
+              <p className="font-mono text-sm font-black uppercase">Sections</p>
+              <ol className="mt-3 grid gap-2 sm:grid-cols-2">
+                {chapter.sections.map((s, i) => (
+                  <li key={s.id}>
+                    <a
+                      href={`#section-${s.id}`}
+                      className="flex items-start gap-2 rounded-lg border-[3px] border-ink bg-paper px-3 py-2 font-mono text-sm font-black outline-none transition hover:-translate-y-0.5 hover:bg-accent focus-visible:ring-4 focus-visible:ring-primary"
+                    >
+                      <span className="shrink-0 text-xs opacity-60">{String(i + 1).padStart(2, '0')}</span>
+                      {s.heading}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div className="grid gap-8">
+              {chapter.sections.map((section) => (
+                <Section key={section.id} section={section} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="mb-10 rounded-xl border-[3px] border-ink bg-white p-6 shadow-hard">
+            <p className="font-mono text-sm font-black">
+              Le contenu interactif détaillé arrive dans la prochaine étape.
+            </p>
+          </div>
+        )}
 
         {chapter.hasSortingRace && (
           <div className="mt-8">
             <SortingRace />
           </div>
         )}
+
+        {/* ponytail: stubs only — visualizers wired in Gate 9/10/11 */}
+        {chapter.hasPseudoTracer && null}
+        {chapter.hasComplexityViz && null}
+        {chapter.hasMemoryViz && null}
 
         {chapter.quiz && (
           <div className="mt-8">
