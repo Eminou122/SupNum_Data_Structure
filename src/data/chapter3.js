@@ -1,7 +1,6 @@
 export const chapter3 = {
   number: 'Chapitre 3',
   title: 'Algorithmes de tri',
-  slug: 'chapitre-3-tris',
   intro:
     "Le tri, c'est l'art de mettre les choses dans le bon ordre. Sans tri, chercher un contact dans ton téléphone serait une aventure aléatoire. Avec un bon algorithme de tri, c'est O(log n) avec une recherche binaire. Autant dire : la nuit et le jour.",
   sections: [
@@ -64,7 +63,7 @@ export const chapter3 = {
     échanger tableau[i] et tableau[min_idx]`,
       keyPoints: [
         'Complexité : O(n²) dans tous les cas (même si déjà trié — il cherche quand même)',
-        'N comparaisons, N échanges maximum',
+        'Environ n(n−1)/2 comparaisons et au plus n−1 échanges',
         'Avantage : très peu d\'échanges — bon si les échanges coûtent cher',
         'Inconvénient : lent, non stable (peut changer l\'ordre de valeurs égales)',
       ],
@@ -99,9 +98,13 @@ export const chapter3 = {
       analogy:
         "Imagine un aquarium : les bulles les plus grosses montent en premier vers la surface. Chaque passage fait remonter le plus grand élément restant.",
       pseudoCode: `pour i de 0 à n-2 :
+    échangé = faux
     pour j de 0 à n-2-i :
         si tableau[j] > tableau[j+1] :
-            échanger tableau[j] et tableau[j+1]`,
+            échanger tableau[j] et tableau[j+1]
+            échangé = vrai
+    si échangé == faux :
+        arrêter`,
       keyPoints: [
         'Meilleur cas (avec optimisation) : O(n) — si déjà trié, zéro échange',
         'Pire cas : O(n²)',

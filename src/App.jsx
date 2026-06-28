@@ -27,7 +27,10 @@ export default function App() {
   const [slug, setSlug] = useState(getSlugFromHash)
 
   useEffect(() => {
-    const onHash = () => setSlug(getSlugFromHash())
+    const onHash = () => {
+      if (window.location.hash.startsWith('#/')) setSlug(getSlugFromHash())
+      if (!window.location.hash || window.location.hash === '#accueil') setSlug(null)
+    }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
