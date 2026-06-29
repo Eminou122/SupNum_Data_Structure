@@ -85,7 +85,6 @@ export default function ChapterViewer({ chapter }) {
           </div>
         )}
 
-        {/* ponytail: stubs only — visualizers wired in Gate 9/10/11 */}
         {chapter.hasPseudoTracer && (
           <div className="mt-8">
             <PseudoTracer />

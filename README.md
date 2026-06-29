@@ -2,18 +2,16 @@
 
 Interactive demo website for SupNum second-year students learning data structures.
 
+## Version
+
+`v1.2.0 — Interactive chapters`
+
 ## Stack
 
 - Vite
 - React
 - Tailwind CSS
-- Frontend-only static deployment
-
-## Current phase
-
-`v1.2 Gate 11 — Chapter 4 interactive pointers and structures`
-
-Chapter 1 now has full interactive content, a pseudo-code tracer, and a quiz. Chapter 2 now has full interactive content, a complexity growth visualizer, and a quiz. Chapter 4 now has full interactive content, a memory visualizer, and a quiz.
+- Frontend-only static deployment (no backend, no database, no auth)
 
 ## Public URL
 
@@ -23,15 +21,14 @@ Resources are served statically by Vercel from the `public/resources` folder.
 
 ## Features
 
-- **Homepage**: roadmap, all four chapter cards active with `Commencer →` — `#accueil`
-- **Chapter 1 stub viewer**: intro + resource link — `#/chapitre-1-intro`
-- **Chapter 2 stub viewer**: intro + resource link — `#/chapitre-2-complexite`
-- **Chapter 3 course viewer**: interactive sorting chapter, Big-O, SortingRace, quiz — `#/chapitre-3-tris`
-- **Chapter 4 stub viewer**: intro + resource link — `#/chapitre-4-pointeurs-structures`
-- **Playground**: standalone SortingRace page — `#/playground`
-- **Real TD/TP catalog**: 6 items, filters, expandable cards, real download links — `#/td-tp`
-- **Examens placeholder**: honest coming-soon page — `#/examens`
-- **Resources page**: all course/TD/TP files as direct download links — `#/ressources`
+- **Chapter 1** — interactive lesson + PseudoTracer + quiz — `#/chapitre-1-intro`
+- **Chapter 2** — interactive lesson + ComplexityViz + quiz — `#/chapitre-2-complexite`
+- **Chapter 3** — sorting lesson + SortingRace + quiz — `#/chapitre-3-tris`
+- **Chapter 4** — interactive lesson + MemoryViz + quiz — `#/chapitre-4-pointeurs-structures`
+- **Playground** — standalone SortingRace page — `#/playground`
+- **TD/TP catalog** — 6 items, filters, expandable cards, real download links — `#/td-tp`
+- **Examens** — honest coming-soon placeholder — `#/examens`
+- **Resources** — all course/TD/TP files as direct download links — `#/ressources`
 - Hash-based routing — no router dependency
 
 ## Resource folder structure
@@ -65,7 +62,10 @@ npm run dev
 Open `http://localhost:5173` in your browser.
 
 - Homepage: `http://localhost:5173`
+- Chapter 1: `http://localhost:5173/#/chapitre-1-intro`
+- Chapter 2: `http://localhost:5173/#/chapitre-2-complexite`
 - Chapter 3: `http://localhost:5173/#/chapitre-3-tris`
+- Chapter 4: `http://localhost:5173/#/chapitre-4-pointeurs-structures`
 - Playground: `http://localhost:5173/#/playground`
 - TD/TP: `http://localhost:5173/#/td-tp`
 - Examens: `http://localhost:5173/#/examens`

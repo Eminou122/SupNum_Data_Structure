@@ -19,12 +19,12 @@ const CHAPTER_ROUTES = {
 }
 
 const reasons = [
-  'Voir au lieu de mémoriser',
-  'Comprendre Big-O avec des courses',
-  'Réviser avec les TD/TP disponibles',
+  '4 chapitres interactifs avec quiz',
+  'Visualiseurs : traceur, Big-O, tris, mémoire',
+  'TD/TP et supports de cours téléchargeables',
 ]
 const roadmap = [
-  ['Phase 1', 'Cours interactifs', 'En cours'],
+  ['Phase 1', 'Cours interactifs', 'Terminé'],
   ['Phase 2', 'TD / TP', 'Disponible'],
   ['Phase 3', 'Examens corrigés', 'Bientôt'],
 ]
@@ -108,7 +108,7 @@ export default function App() {
         <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
           <div>
             <span className="inline-flex rounded-full border-[3px] border-ink bg-coral px-4 py-2 font-mono text-sm font-black shadow-hardSm">
-              Démo live • Cours + TD/TP + Quiz
+              v1.2 • 4 chapitres interactifs + Quiz + Visualiseurs
             </span>
             <h1 className="mt-6 max-w-4xl font-mono text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
               Comprends les structures de données sans dormir en cours.
@@ -120,10 +120,10 @@ export default function App() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#/chapitre-3-tris"
+                href="#/chapitre-1-intro"
                 className="rounded-xl border-[3px] border-ink bg-success px-6 py-4 text-center font-mono font-black shadow-hard outline-none transition hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-primary"
               >
-                Commencer avec les tris
+                Commencer le chapitre 1
               </a>
               <a
                 href="#roadmap"
