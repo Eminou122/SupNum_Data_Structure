@@ -126,7 +126,7 @@ export default function App() {
         <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
           <div>
             <span className="inline-flex rounded-full border-[3px] border-ink bg-coral px-4 py-2 font-mono text-sm font-black shadow-hardSm">
-              v1.2 • 4 chapitres interactifs + Quiz + Visualiseurs
+              v1.3 • 4 chapitres + pratique guidée TD/TP + Quiz
             </span>
             <h1 className="mt-6 max-w-4xl font-mono text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
               Comprends les structures de données sans dormir en cours.

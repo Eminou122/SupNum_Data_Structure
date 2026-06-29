@@ -256,7 +256,7 @@ il faut l'analyser et reporter son origine.
       solution: `1. triSelection O(n²) :
    n=1 000  → ~1M comparaisons  → quasi-instantané
    n=10 000 → ~100M            → quelques secondes
-   n=50 000 → ~2,5 milliards   → plusieurs dizaines de secondes
+   n=50 000 → ~1,25 milliard   → plusieurs dizaines de secondes
 
 2. triFusion : problème attendu à partir de n=40 000–50 000.
    La cause : int temp[fin2-debut1+1] dans fusion() est un

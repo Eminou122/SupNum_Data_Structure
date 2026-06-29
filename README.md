@@ -1,10 +1,10 @@
 # SupNum_Data_Structure
 
-Interactive demo website for SupNum second-year students learning data structures.
+Interactive educational website for SupNum second-year students learning data structures and algorithmic complexity.
 
 ## Version
 
-`v1.3 Gate 17 — TP Tri guided practice`
+`v1.3.0 — Interactive Practice Mode`
 
 ## Stack
 
@@ -21,33 +21,34 @@ Resources are served statically by Vercel from the `public/resources` folder.
 
 ## Features
 
-- **Chapter 1** — interactive lesson + PseudoTracer + quiz — `#/chapitre-1-intro`
-- **Chapter 2** — interactive lesson + ComplexityViz + quiz — `#/chapitre-2-complexite`
-- **Chapter 3** — sorting lesson + SortingRace + quiz — `#/chapitre-3-tris`
-- **Chapter 4** — interactive lesson + MemoryViz + quiz — `#/chapitre-4-pointeurs-structures`
-- **Playground** — standalone SortingRace page — `#/playground`
-- **TD/TP catalog** — 6 items, filters, expandable cards, real download links — `#/td-tp`
-- **TD 01 guided practice** — first guided practice page — `#/pratique/td-01`
-  - 5 exercises with hints, hidden solutions, and explanations
-  - Chapter links to relevant interactive chapters
-  - No auto-correction, no backend, no progress saving
-- **TD Révision guided practice** — second guided practice page — `#/pratique/td-revision`
-  - 4 exercises with hints, hidden solutions, and explanations
-  - No auto-correction, no backend, no progress saving
-- **TP 1 guided practice** — third guided practice page — `#/pratique/tp-1-listes`
-  - 5 exercises with hints, hidden solutions, and explanations
-  - No auto-correction, no backend, no progress saving
-- **TP 2/3 guided practice** — fourth guided practice page — `#/pratique/tp-2-3-piles-files`
-  - 5 exercises covering pile (linked list), file (linked list), and pile par tableau
-  - Hints, hidden solutions, explanations, chapter links
-  - No auto-correction, no backend, no progress saving
-- **TP Tri guided practice** — fifth guided practice page — `#/pratique/tp-tri`
-  - 5 exercises covering file I/O, triSelection, triFusion, time measurement, and algorithm comparison
-  - Hints, hidden solutions, explanations, chapter links
-  - No auto-correction, no backend, no progress saving
+### Interactive chapters (4)
+
+- **Chapter 1** — Intro & pseudo-code + PseudoTracer visualizer + quiz — `#/chapitre-1-intro`
+- **Chapter 2** — Algorithmic complexity + ComplexityViz visualizer + quiz — `#/chapitre-2-complexite`
+- **Chapter 3** — Sorting algorithms + SortingRace visualizer + quiz — `#/chapitre-3-tris`
+- **Chapter 4** — Pointers & structures + MemoryViz visualizer + quiz — `#/chapitre-4-pointeurs-structures`
+
+### Guided practice (5 pages)
+
+- **TD 01** — `#/pratique/td-01` — 5 exercises on pointers, recursion, complexity, linked lists
+- **TD Révision** — `#/pratique/td-revision` — 4 exercises on arrays, search, merge, sorting
+- **TP 1** — `#/pratique/tp-1-listes` — 5 exercises on singly linked lists in C++
+- **TP 2/3** — `#/pratique/tp-2-3-piles-files` — 5 exercises on stacks and queues (linked list + array)
+- **TP Tri** — `#/pratique/tp-tri` — 5 exercises on file I/O, selection sort, merge sort, time measurement
+
+All practice pages: hints, hidden solutions, explanations, chapter links.
+No auto-correction, no backend, no progress saving.
+
+### Other pages
+
+- **Playground** — interactive SortingRace — `#/playground`
+- **TD/TP catalog** — 6 items, filters, expandable cards, download links — `#/td-tp`
 - **Examens** — honest coming-soon placeholder — `#/examens`
 - **Resources** — all course/TD/TP files as direct download links — `#/ressources`
-- Hash-based routing — no router dependency
+
+### Routing
+
+Hash-based routing — no router dependency.
 
 ## Resource folder structure
 
@@ -90,6 +91,7 @@ Open `http://localhost:5173` in your browser.
 - TD Révision practice: `http://localhost:5173/#/pratique/td-revision`
 - TP 1 practice: `http://localhost:5173/#/pratique/tp-1-listes`
 - TP 2/3 practice: `http://localhost:5173/#/pratique/tp-2-3-piles-files`
+- TP Tri practice: `http://localhost:5173/#/pratique/tp-tri`
 - Examens: `http://localhost:5173/#/examens`
 - Resources: `http://localhost:5173/#/ressources`
 
@@ -104,10 +106,8 @@ Deploy as a static Vite app to the `eminouhaddou-1126` Vercel scope.
 ## Intentionally not built
 
 - Backend / Database / Authentication
+- Progress saving / scoring / auto-grading
 - Upload system / Google Drive integration
 - PDF parser / embedded PDF viewer
-- Correction engine / exam questions
-- Code runner / compiler
-- Dashboard
-- Dark mode
-- Fake solutions or model answers
+- Correction engine / code runner / compiler
+- Dashboard / dark mode

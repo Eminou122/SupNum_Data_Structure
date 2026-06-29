@@ -252,7 +252,7 @@ export default function TdTpPage() {
       <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-flex rounded-full border-[3px] border-ink bg-coral px-4 py-2 font-mono text-sm font-black shadow-hardSm">
-            Gate 5 • catalogue réel
+            v1.3 • Pratique guidée TD/TP
           </span>
           <h1 className="mt-4 font-mono text-4xl font-black leading-tight sm:text-5xl">
             TD / TP
