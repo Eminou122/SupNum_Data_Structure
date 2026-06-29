@@ -5,6 +5,8 @@ import SortingRace from './components/SortingRace.jsx'
 import TdTpPage from './components/TdTpPage.jsx'
 import ExamensPage from './components/ExamensPage.jsx'
 import ResourcesPage from './components/ResourcesPage.jsx'
+import PracticePage from './components/PracticePage.jsx'
+import { td01Practice } from './data/practice/td01.js'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 import { chapter1 } from './data/chapter1.js'
@@ -16,6 +18,10 @@ const CHAPTER_ROUTES = {
   'chapitre-2-complexite': chapter2,
   'chapitre-3-tris': chapter3,
   'chapitre-4-pointeurs-structures': chapter4,
+}
+
+const PRACTICE_ROUTES = {
+  'pratique/td-01': td01Practice,
 }
 
 const reasons = [
@@ -48,6 +54,10 @@ export default function App() {
 
   const chapter = slug ? CHAPTER_ROUTES[slug] : null
   if (chapter) return <ChapterViewer chapter={chapter} />
+
+  const practice = slug ? PRACTICE_ROUTES[slug] : null
+  if (practice) return <PracticePage practice={practice} />
+
   if (slug === 'playground') return <PlaygroundPage />
   if (slug === 'td-tp') return <TdTpPage />
   if (slug === 'examens') return <ExamensPage />

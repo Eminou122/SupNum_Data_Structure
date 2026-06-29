@@ -110,7 +110,7 @@ function TdTpCard({ item, expanded, onToggle }) {
           ))}
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 flex flex-wrap gap-2">
           {isComingSoon ? (
             <button
               type="button"
@@ -120,6 +120,7 @@ function TdTpCard({ item, expanded, onToggle }) {
               Bientôt
             </button>
           ) : (
+            <>
             <button
               type="button"
               onClick={onToggle}
@@ -128,6 +129,15 @@ function TdTpCard({ item, expanded, onToggle }) {
             >
               {expanded ? 'Masquer les détails ↑' : 'Voir les détails ↓'}
             </button>
+            {item.practiceUrl && (
+              <a
+                href={item.practiceUrl}
+                className="rounded-lg border-[3px] border-ink bg-success px-4 py-2 font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+              >
+                Commencer la pratique →
+              </a>
+            )}
+            </>
           )}
         </div>
       </div>

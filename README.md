@@ -4,7 +4,7 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Version
 
-`v1.2.0 — Interactive chapters`
+`v1.3 Gate 13 — TD 01 guided practice`
 
 ## Stack
 
@@ -27,6 +27,10 @@ Resources are served statically by Vercel from the `public/resources` folder.
 - **Chapter 4** — interactive lesson + MemoryViz + quiz — `#/chapitre-4-pointeurs-structures`
 - **Playground** — standalone SortingRace page — `#/playground`
 - **TD/TP catalog** — 6 items, filters, expandable cards, real download links — `#/td-tp`
+- **TD 01 guided practice** — first guided practice page — `#/pratique/td-01`
+  - 5 exercises with hints, hidden solutions, and explanations
+  - Chapter links to relevant interactive chapters
+  - No auto-correction, no backend, no progress saving
 - **Examens** — honest coming-soon placeholder — `#/examens`
 - **Resources** — all course/TD/TP files as direct download links — `#/ressources`
 - Hash-based routing — no router dependency
@@ -68,6 +72,7 @@ Open `http://localhost:5173` in your browser.
 - Chapter 4: `http://localhost:5173/#/chapitre-4-pointeurs-structures`
 - Playground: `http://localhost:5173/#/playground`
 - TD/TP: `http://localhost:5173/#/td-tp`
+- TD 01 practice: `http://localhost:5173/#/pratique/td-01`
 - Examens: `http://localhost:5173/#/examens`
 - Resources: `http://localhost:5173/#/ressources`
 

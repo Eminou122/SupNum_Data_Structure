@@ -30,6 +30,7 @@ export const tdtpItems = [
     ],
     sourceFile: 'TD-01.pdf',
     sourceUrl: '/resources/tds/TD-01.pdf',
+    practiceUrl: '#/pratique/td-01',
     attachments: [],
     codePreview: null,
     status: 'available',
