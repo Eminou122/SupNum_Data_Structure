@@ -6,6 +6,10 @@ import TdTpPage from './components/TdTpPage.jsx'
 import ExamensPage from './components/ExamensPage.jsx'
 import ResourcesPage from './components/ResourcesPage.jsx'
 import PracticePage from './components/PracticePage.jsx'
+import ExamplesPage from './components/ExamplesPage.jsx'
+import ExampleViewer from './components/ExampleViewer.jsx'
+import SortExampleVisualizer from './components/SortExampleVisualizer.jsx'
+import { triSelectionExample } from './data/examples/triSelection.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -30,6 +34,10 @@ const PRACTICE_ROUTES = {
   'pratique/tp-1-listes': tp1ListesPractice,
   'pratique/tp-2-3-piles-files': tp23PilesFilesPractice,
   'pratique/tp-tri': tpTriPractice,
+}
+
+const EXAMPLE_ROUTES = {
+  'exemples/tri-selection': triSelectionExample,
 }
 
 const reasons = [
@@ -66,6 +74,14 @@ export default function App() {
   const practice = slug ? PRACTICE_ROUTES[slug] : null
   if (practice) return <PracticePage practice={practice} />
 
+  const example = slug ? EXAMPLE_ROUTES[slug] : null
+  if (example) return (
+    <ExampleViewer example={example}>
+      <SortExampleVisualizer frames={example.frames} />
+    </ExampleViewer>
+  )
+
+  if (slug === 'exemples') return <ExamplesPage />
   if (slug === 'playground') return <PlaygroundPage />
   if (slug === 'td-tp') return <TdTpPage />
   if (slug === 'examens') return <ExamensPage />
@@ -105,6 +121,12 @@ export default function App() {
               className="rounded-lg border-[3px] border-ink bg-success px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
             >
               TD/TP
+            </a>
+            <a
+              href="#/exemples"
+              className="rounded-lg border-[3px] border-ink bg-accent px-3 py-2 font-mono text-sm font-black shadow-hardSm outline-none focus-visible:ring-4 focus-visible:ring-primary sm:px-4"
+            >
+              Exemples
             </a>
             <a
               href="#/examens"
