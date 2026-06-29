@@ -142,6 +142,7 @@ void ajouFin(Liste& L, int v) {
     ],
     sourceFile: 'tp_2_3_pile_file.txt',
     sourceUrl: '/resources/tps/tp_2_3_pile_file.txt',
+    practiceUrl: '#/pratique/tp-2-3-piles-files',
     attachments: [{ filename: 'tp_2_3_pile_file.txt', url: '/resources/tps/tp_2_3_pile_file.txt', language: 'C++', label: 'Squelette piles & files' }],
     codePreview: `#include <iostream>
 using namespace std;
