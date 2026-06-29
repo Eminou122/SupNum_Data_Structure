@@ -11,9 +11,9 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Current phase
 
-`v1.2 Gate 10 — Chapter 2 interactive complexity`
+`v1.2 Gate 11 — Chapter 4 interactive pointers and structures`
 
-Chapter 1 now has full interactive content, a pseudo-code tracer, and a quiz. Chapter 2 now has full interactive content, a complexity growth visualizer, and a quiz. Chapter 4 remains a stub pending later gates.
+Chapter 1 now has full interactive content, a pseudo-code tracer, and a quiz. Chapter 2 now has full interactive content, a complexity growth visualizer, and a quiz. Chapter 4 now has full interactive content, a memory visualizer, and a quiz.
 
 ## Public URL
 

@@ -2,6 +2,7 @@ import SortingRace from './SortingRace.jsx'
 import Quiz from './Quiz.jsx'
 import PseudoTracer from './PseudoTracer.jsx'
 import ComplexityViz from './ComplexityViz.jsx'
+import MemoryViz from './MemoryViz.jsx'
 
 export default function ChapterViewer({ chapter }) {
   return (
@@ -95,7 +96,11 @@ export default function ChapterViewer({ chapter }) {
             <ComplexityViz />
           </div>
         )}
-        {chapter.hasMemoryViz && null}
+        {chapter.hasMemoryViz && (
+          <div className="mt-8">
+            <MemoryViz />
+          </div>
+        )}
 
         {chapter.quiz && (
           <div className="mt-8">
