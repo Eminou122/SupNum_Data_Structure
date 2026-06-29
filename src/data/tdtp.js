@@ -200,6 +200,7 @@ void depiler(Pile& P) {
     ],
     sourceFile: 'sourceTri.txt',
     sourceUrl: '/resources/tps/sourceTri.txt',
+    practiceUrl: '#/pratique/tp-tri',
     attachments: [{ filename: 'sourceTri.txt', url: '/resources/tps/sourceTri.txt', language: 'C++', label: 'Source tri sur fichiers' }],
     codePreview: `#include <iostream>
 #include <fstream>

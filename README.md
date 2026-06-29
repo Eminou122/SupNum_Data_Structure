@@ -4,7 +4,7 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Version
 
-`v1.3 Gate 16 — TP 2/3 Piles & Files guided practice`
+`v1.3 Gate 17 — TP Tri guided practice`
 
 ## Stack
 
@@ -39,6 +39,10 @@ Resources are served statically by Vercel from the `public/resources` folder.
   - No auto-correction, no backend, no progress saving
 - **TP 2/3 guided practice** — fourth guided practice page — `#/pratique/tp-2-3-piles-files`
   - 5 exercises covering pile (linked list), file (linked list), and pile par tableau
+  - Hints, hidden solutions, explanations, chapter links
+  - No auto-correction, no backend, no progress saving
+- **TP Tri guided practice** — fifth guided practice page — `#/pratique/tp-tri`
+  - 5 exercises covering file I/O, triSelection, triFusion, time measurement, and algorithm comparison
   - Hints, hidden solutions, explanations, chapter links
   - No auto-correction, no backend, no progress saving
 - **Examens** — honest coming-soon placeholder — `#/examens`
