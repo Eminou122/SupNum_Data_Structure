@@ -60,6 +60,7 @@ export const tdtpItems = [
     ],
     sourceFile: 'TD-Révision.pdf',
     sourceUrl: '/resources/tds/TD-Revision.pdf',
+    practiceUrl: '#/pratique/td-revision',
     attachments: [],
     codePreview: null,
     status: 'available',
