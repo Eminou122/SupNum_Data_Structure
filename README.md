@@ -4,7 +4,7 @@ Interactive demo website for SupNum second-year students learning data structure
 
 ## Version
 
-`v1.3 Gate 14 — TD Révision guided practice`
+`v1.3 Gate 15 — TP 1 Listes chaînées guided practice`
 
 ## Stack
 
@@ -33,6 +33,9 @@ Resources are served statically by Vercel from the `public/resources` folder.
   - No auto-correction, no backend, no progress saving
 - **TD Révision guided practice** — second guided practice page — `#/pratique/td-revision`
   - 4 exercises with hints, hidden solutions, and explanations
+  - No auto-correction, no backend, no progress saving
+- **TP 1 guided practice** — third guided practice page — `#/pratique/tp-1-listes`
+  - 5 exercises with hints, hidden solutions, and explanations
   - No auto-correction, no backend, no progress saving
 - **Examens** — honest coming-soon placeholder — `#/examens`
 - **Resources** — all course/TD/TP files as direct download links — `#/ressources`
@@ -77,6 +80,7 @@ Open `http://localhost:5173` in your browser.
 - TD/TP: `http://localhost:5173/#/td-tp`
 - TD 01 practice: `http://localhost:5173/#/pratique/td-01`
 - TD Révision practice: `http://localhost:5173/#/pratique/td-revision`
+- TP 1 practice: `http://localhost:5173/#/pratique/tp-1-listes`
 - Examens: `http://localhost:5173/#/examens`
 - Resources: `http://localhost:5173/#/ressources`
 

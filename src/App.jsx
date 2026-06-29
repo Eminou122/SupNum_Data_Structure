@@ -8,6 +8,7 @@ import ResourcesPage from './components/ResourcesPage.jsx'
 import PracticePage from './components/PracticePage.jsx'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
+import { tp1ListesPractice } from './data/practice/tp1Listes.js'
 import { chapters } from './data/chapters.js'
 import { chapter3 } from './data/chapter3.js'
 import { chapter1 } from './data/chapter1.js'
@@ -24,6 +25,7 @@ const CHAPTER_ROUTES = {
 const PRACTICE_ROUTES = {
   'pratique/td-01': td01Practice,
   'pratique/td-revision': tdRevisionPractice,
+  'pratique/tp-1-listes': tp1ListesPractice,
 }
 
 const reasons = [

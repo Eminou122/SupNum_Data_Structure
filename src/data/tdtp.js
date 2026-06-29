@@ -89,6 +89,7 @@ export const tdtpItems = [
     ],
     sourceFile: 'TP 1.pdf',
     sourceUrl: '/resources/tps/TP-1.pdf',
+    practiceUrl: '#/pratique/tp-1-listes',
     attachments: [{ filename: 'listechaine.txt', url: '/resources/tps/listechaine.txt', language: 'C++', label: 'Squelette de liste chaînée' }],
     codePreview: `#include <iostream>
 using namespace std;
