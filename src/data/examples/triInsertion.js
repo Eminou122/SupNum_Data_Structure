@@ -27,7 +27,7 @@ export const triInsertionExample = {
     {
       arr: [1, 5, 3, 9, 0],
       comparing: [0, 1],
-      sorted: [],
+      sorted: [0],
       description: '5 ≥ 1 → aucun décalage, 5 reste à sa place',
     },
     {
@@ -117,7 +117,7 @@ export const triInsertionExample = {
     {
       arr: [0, 1, 3, 5, 9],
       comparing: [],
-      sorted: [],
+      sorted: [0, 1, 2, 3, 4],
       description: 'j=-1 → 0 insérée à la position 0, traversée complète !',
     },
 

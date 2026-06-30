@@ -103,7 +103,7 @@ export const triFusionExample = {
     {
       arr: [3, 27, 38, 43, 9, 10, 82],
       comparing: [],
-      sorted: [0, 1, 2, 3, 4, 5, 6],
+      sorted: [0, 1, 2, 3],
       description: 'Résultat droit : [9, 10, 82] — moitié droite triée !',
     },
 
