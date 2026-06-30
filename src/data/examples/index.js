@@ -15,7 +15,7 @@ export const exampleItems = [
     badge: 'Tri',
     description: 'Chaque élément est inséré à sa bonne position dans la partie déjà triée.',
     route: '#/exemples/tri-insertion',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'tri-bulle',
@@ -24,7 +24,7 @@ export const exampleItems = [
     badge: 'Tri',
     description: 'Les éléments remontent à leur place comme des bulles, comparaison par comparaison.',
     route: '#/exemples/tri-bulle',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'tri-fusion',
@@ -33,7 +33,7 @@ export const exampleItems = [
     badge: 'Tri',
     description: 'Divise le tableau en deux, trie chaque moitié, puis fusionne. O(n log n) en action.',
     route: '#/exemples/tri-fusion',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'liste-insertion',

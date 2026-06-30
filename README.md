@@ -4,7 +4,7 @@ Interactive educational website for SupNum second-year students learning data st
 
 ## Version
 
-`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 19 — Interactive Examples Lab (foundation)`
+`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 20 — Sorting examples`
 
 ## Stack
 
@@ -39,14 +39,17 @@ Resources are served statically by Vercel from the `public/resources` folder.
 All practice pages: hints, hidden solutions, explanations, chapter links.
 No auto-correction, no backend, no progress saving.
 
-### Interactive Examples Lab (Gate 19 — v1.4 foundation)
+### Interactive Examples Lab (Gate 20 — v1.4 sorting examples)
 
-- **Examples catalog** — 8 examples, category filter, 1 active / 7 coming-soon — `#/exemples`
+- **Examples catalog** — 8 examples, category filter, 4 active / 4 coming-soon — `#/exemples`
 - **Tri sélection** — step-by-step bar chart visualizer on `{1,5,3,9,0}` — `#/exemples/tri-selection`
+- **Tri insertion** — step-by-step visualizer on `{1,5,3,9,0}` — `#/exemples/tri-insertion`
+- **Tri à bulles** — step-by-step visualizer on `{7,3,1,5,2}` — `#/exemples/tri-bulle`
+- **Tri fusion** — step-by-step visualizer on `{38,27,43,3,9,82,10}` — `#/exemples/tri-fusion`
 
-No code runner, no compiler, no backend, no progress saving. Watch-only animated lessons.
+No code runner, no compiler, no backend, no progress saving. Watch-only step-by-step lessons.
 
-Coming soon (Gates 20–23): tri insertion, tri bulle, tri fusion, liste chaînée, pile, file, ABR.
+Coming soon: liste chaînée, pile, file, ABR.
 
 ### Other pages
 

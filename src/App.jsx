@@ -10,6 +10,9 @@ import ExamplesPage from './components/ExamplesPage.jsx'
 import ExampleViewer from './components/ExampleViewer.jsx'
 import SortExampleVisualizer from './components/SortExampleVisualizer.jsx'
 import { triSelectionExample } from './data/examples/triSelection.js'
+import { triInsertionExample } from './data/examples/triInsertion.js'
+import { triBulleExample } from './data/examples/triBulle.js'
+import { triFusionExample } from './data/examples/triFusion.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -38,6 +41,9 @@ const PRACTICE_ROUTES = {
 
 const EXAMPLE_ROUTES = {
   'exemples/tri-selection': triSelectionExample,
+  'exemples/tri-insertion': triInsertionExample,
+  'exemples/tri-bulle': triBulleExample,
+  'exemples/tri-fusion': triFusionExample,
 }
 
 const reasons = [
