@@ -11,6 +11,7 @@ import ExampleViewer from './components/ExampleViewer.jsx'
 import SortExampleVisualizer from './components/SortExampleVisualizer.jsx'
 import LinkedListVisualizer from './components/LinkedListVisualizer.jsx'
 import StackQueueVisualizer from './components/StackQueueVisualizer.jsx'
+import TreeVisualizer from './components/TreeVisualizer.jsx'
 import { triSelectionExample } from './data/examples/triSelection.js'
 import { triInsertionExample } from './data/examples/triInsertion.js'
 import { triBulleExample } from './data/examples/triBulle.js'
@@ -18,6 +19,7 @@ import { triFusionExample } from './data/examples/triFusion.js'
 import { listeInsertionExample } from './data/examples/listeInsertion.js'
 import { pileTableauExample } from './data/examples/pileTableau.js'
 import { fileTableauExample } from './data/examples/fileTableau.js'
+import { abrInsertionExample } from './data/examples/abrInsertion.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -52,6 +54,7 @@ const EXAMPLE_ROUTES = {
   'exemples/liste-insertion': listeInsertionExample,
   'exemples/pile-tableau': pileTableauExample,
   'exemples/file-tableau': fileTableauExample,
+  'exemples/abr-insertion': abrInsertionExample,
 }
 
 const reasons = [
@@ -95,7 +98,9 @@ export default function App() {
         ? <LinkedListVisualizer frames={example.frames} />
         : example.id === 'pile-tableau' || example.id === 'file-tableau'
           ? <StackQueueVisualizer example={example} />
-          : <SortExampleVisualizer frames={example.frames} />}
+          : example.id === 'abr-insertion'
+            ? <TreeVisualizer frames={example.frames} />
+            : <SortExampleVisualizer frames={example.frames} />}
     </ExampleViewer>
   )
 

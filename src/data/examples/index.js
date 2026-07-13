@@ -69,6 +69,6 @@ export const exampleItems = [
     badge: 'Arbre',
     description: "Regarde l'arbre binaire de recherche grandir nœud par nœud, gauche si plus petit, droite si plus grand.",
     route: '#/exemples/abr-insertion',
-    status: 'coming-soon',
+    status: 'available',
   },
 ]

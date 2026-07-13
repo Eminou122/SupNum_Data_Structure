@@ -1,0 +1,183 @@
+export const abrInsertionExample = {
+  id: 'abr-insertion',
+  title: 'ABR — insertion',
+  badge: 'Exemple interactif • Arbre binaire de recherche',
+  intro: 'Observe comment un ABR place chaque valeur : plus petit à gauche, plus grand à droite.',
+  source: 'insert_ABR.cpp + ABR.cpp',
+  mode: 'tree',
+  frames: [
+    {
+      tree: null,
+      path: [],
+      inserted: null,
+      activeValue: null,
+      description: 'État initial de insert_ABR.cpp : l’arbre est vide, racine = NULL.',
+    },
+    {
+      tree: { val: 4, left: null, right: null },
+      path: [4],
+      inserted: 4,
+      activeValue: 4,
+      description: 'insertion(4) : racine vaut NULL, donc 4 devient la racine.',
+    },
+    {
+      tree: { val: 4, left: null, right: null },
+      path: [4],
+      inserted: null,
+      activeValue: 4,
+      description: 'Pour insérer 3 : 3 < 4, on descend à gauche.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: { val: 3, left: null, right: null },
+        right: null,
+      },
+      path: [4, 3],
+      inserted: 3,
+      activeValue: 3,
+      description: 'Le pointeur gauche de 4 vaut NULL : on y insère 3.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: { val: 3, left: null, right: null },
+        right: null,
+      },
+      path: [4],
+      inserted: null,
+      activeValue: 4,
+      description: 'Pour insérer 8 : 8 > 4, direction droite. Le GPS de l’ABR ne se trompe pas.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: { val: 3, left: null, right: null },
+        right: { val: 8, left: null, right: null },
+      },
+      path: [4, 8],
+      inserted: 8,
+      activeValue: 8,
+      description: 'Le pointeur droit de 4 vaut NULL : on y insère 8.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: { val: 3, left: null, right: null },
+        right: { val: 8, left: null, right: null },
+      },
+      path: [4, 3],
+      inserted: null,
+      activeValue: 3,
+      description: 'Pour insérer 2 : 2 < 4, puis 2 < 3. On suit deux fois le chemin gauche.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: {
+          val: 3,
+          left: { val: 2, left: null, right: null },
+          right: null,
+        },
+        right: { val: 8, left: null, right: null },
+      },
+      path: [4, 3, 2],
+      inserted: 2,
+      activeValue: 2,
+      description: 'À gauche de 3, le pointeur vaut NULL : 2 prend cette place.',
+    },
+    {
+      tree: null,
+      path: [],
+      inserted: null,
+      activeValue: null,
+      description: 'ABR.cpp démarre un second programme : nouvelle racine NULL, nouvel arbre.',
+    },
+    {
+      tree: { val: 4, left: null, right: null },
+      path: [4],
+      inserted: 4,
+      activeValue: 4,
+      description: 'Insert(4) : 4 devient la racine du second ABR.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: null,
+        right: { val: 5, left: null, right: null },
+      },
+      path: [4, 5],
+      inserted: 5,
+      activeValue: 5,
+      description: '5 > 4 : on va à droite et on insère 5 sur le pointeur NULL.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: null,
+        right: {
+          val: 5,
+          left: null,
+          right: { val: 6, left: null, right: null },
+        },
+      },
+      path: [4, 5, 6],
+      inserted: 6,
+      activeValue: 6,
+      description: '6 > 4, puis 6 > 5 : deux virages à droite et 6 est inséré.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: { val: 2, left: null, right: null },
+        right: {
+          val: 5,
+          left: null,
+          right: { val: 6, left: null, right: null },
+        },
+      },
+      path: [4, 2],
+      inserted: 2,
+      activeValue: 2,
+      description: '2 < 4 : cette fois, on tourne à gauche et on insère 2.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: {
+          val: 2,
+          left: { val: 1, left: null, right: null },
+          right: null,
+        },
+        right: {
+          val: 5,
+          left: null,
+          right: { val: 6, left: null, right: null },
+        },
+      },
+      path: [4, 2, 1],
+      inserted: 1,
+      activeValue: 1,
+      description: '1 < 4, puis 1 < 2 : 1 devient le fils gauche de 2.',
+    },
+    {
+      tree: {
+        val: 4,
+        left: {
+          val: 2,
+          left: { val: 1, left: null, right: null },
+          right: null,
+        },
+        right: {
+          val: 5,
+          left: null,
+          right: { val: 6, left: null, right: null },
+        },
+      },
+      path: [],
+      inserted: null,
+      activeValue: null,
+      description: 'ABR final. Le parcours infixe de ABR.cpp affiche les valeurs triées : 1, 2, 4, 5, 6.',
+    },
+  ],
+}

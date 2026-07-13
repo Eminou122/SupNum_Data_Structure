@@ -4,7 +4,7 @@ Interactive educational website for SupNum second-year students learning data st
 
 ## Version
 
-`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 22 — Stack and queue examples`
+`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 23 — ABR tree example`
 
 ## Stack
 
@@ -39,9 +39,9 @@ Resources are served statically by Vercel from the `public/resources` folder.
 All practice pages: hints, hidden solutions, explanations, chapter links.
 No auto-correction, no backend, no progress saving.
 
-### Interactive Examples Lab (Gate 22 — v1.4 stack and queue examples)
+### Interactive Examples Lab (Gate 23 — v1.4 ABR tree example)
 
-- **Examples catalog** — 8 examples, category filter, 7 active / 1 coming-soon — `#/exemples`
+- **Examples catalog** — all 8 planned examples active — `#/exemples`
 - **Sorting examples** — 4 active step-by-step examples
 - **Tri sélection** — step-by-step bar chart visualizer on `{1,5,3,9,0}` — `#/exemples/tri-selection`
 - **Tri insertion** — step-by-step visualizer on `{1,5,3,9,0}` — `#/exemples/tri-insertion`
@@ -50,10 +50,11 @@ No auto-correction, no backend, no progress saving.
 - **Liste chaînée — insertion en fin** — pointer-based step-by-step visualizer on `2 → 6 → 4 → 9` — `#/exemples/liste-insertion`
 - **Pile — tableau** — LIFO step-by-step visualizer — `#/exemples/pile-tableau`
 - **File — tableau** — FIFO step-by-step visualizer — `#/exemples/file-tableau`
+- **ABR — insertion** — binary search tree insertion visualizer — `#/exemples/abr-insertion`
 
 No code runner, no compiler, no backend, no progress saving. Watch-only step-by-step lessons.
 
-Coming soon: ABR/arbre.
+All 8 planned examples are active. The final v1.4 release is not tagged yet; Gate 24 remains final polish/release.
 
 ### Other pages
 
