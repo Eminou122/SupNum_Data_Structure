@@ -65,7 +65,8 @@ const reasons = [
 const roadmap = [
   ['Phase 1', 'Cours interactifs', 'Terminé'],
   ['Phase 2', 'TD / TP', 'Disponible'],
-  ['Phase 3', 'Examens corrigés', 'Bientôt'],
+  ['Phase 3', "Labo d'exemples v1.4", 'Terminé'],
+  ['Phase 4', 'Examens corrigés', 'Bientôt'],
 ]
 
 function getSlugFromHash() {
@@ -171,15 +172,15 @@ export default function App() {
         <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
           <div>
             <span className="inline-flex rounded-full border-[3px] border-ink bg-coral px-4 py-2 font-mono text-sm font-black shadow-hardSm">
-              v1.3 • 4 chapitres + pratique guidée TD/TP + Quiz
+              v1.4 • 8 exemples interactifs + Quiz + TD/TP
             </span>
             <h1 className="mt-6 max-w-4xl font-mono text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
               Comprends les structures de données sans dormir en cours.
             </h1>
             <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 sm:text-xl">
-              Un mini-site interactif pour apprendre la complexité, les tris,
-              les pointeurs, les listes, les piles et les files avec des exemples
-              visuels.
+              Explore 4 chapitres avec quiz et visualiseurs, révise avec les TD/TP
+              guidés, télécharge les supports et manipule 8 exemples interactifs :
+              tris, liste, pile, file et ABR.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -264,7 +265,7 @@ export default function App() {
         <section id="roadmap" className="border-t-[3px] border-ink bg-accent py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="font-mono text-3xl font-black sm:text-4xl">Roadmap</h2>
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
+            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
               {roadmap.map(([phase, title, status]) => (
                 <article
                   key={phase}

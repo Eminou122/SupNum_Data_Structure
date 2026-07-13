@@ -4,7 +4,7 @@ Interactive educational website for SupNum second-year students learning data st
 
 ## Version
 
-`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 23 — ABR tree example`
+`v1.4.0 — Interactive Examples Lab`
 
 ## Stack
 
@@ -28,6 +28,8 @@ Resources are served statically by Vercel from the `public/resources` folder.
 - **Chapter 3** — Sorting algorithms + SortingRace visualizer + quiz — `#/chapitre-3-tris`
 - **Chapter 4** — Pointers & structures + MemoryViz visualizer + quiz — `#/chapitre-4-pointeurs-structures`
 
+Each chapter includes an interactive visualizer and a short quiz.
+
 ### Guided practice (5 pages)
 
 - **TD 01** — `#/pratique/td-01` — 5 exercises on pointers, recursion, complexity, linked lists
@@ -39,7 +41,7 @@ Resources are served statically by Vercel from the `public/resources` folder.
 All practice pages: hints, hidden solutions, explanations, chapter links.
 No auto-correction, no backend, no progress saving.
 
-### Interactive Examples Lab (Gate 23 — v1.4 ABR tree example)
+### Interactive Examples Lab (v1.4.0)
 
 - **Examples catalog** — all 8 planned examples active — `#/exemples`
 - **Sorting examples** — 4 active step-by-step examples
@@ -54,7 +56,7 @@ No auto-correction, no backend, no progress saving.
 
 No code runner, no compiler, no backend, no progress saving. Watch-only step-by-step lessons.
 
-All 8 planned examples are active. The final v1.4 release is not tagged yet; Gate 24 remains final polish/release.
+All 8 planned examples are active in v1.4.0.
 
 ### Other pages
 
