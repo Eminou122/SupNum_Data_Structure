@@ -51,7 +51,7 @@ export const exampleItems = [
     badge: 'Pile',
     description: 'Empile et dépile des blocs. LIFO en direct : le dernier entré est le premier sorti.',
     route: '#/exemples/pile-tableau',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'file-tableau',
@@ -60,7 +60,7 @@ export const exampleItems = [
     badge: 'File',
     description: 'Enfile et défile. FIFO en action : premier arrivé, premier servi.',
     route: '#/exemples/file-tableau',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'abr-insertion',

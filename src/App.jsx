@@ -10,11 +10,14 @@ import ExamplesPage from './components/ExamplesPage.jsx'
 import ExampleViewer from './components/ExampleViewer.jsx'
 import SortExampleVisualizer from './components/SortExampleVisualizer.jsx'
 import LinkedListVisualizer from './components/LinkedListVisualizer.jsx'
+import StackQueueVisualizer from './components/StackQueueVisualizer.jsx'
 import { triSelectionExample } from './data/examples/triSelection.js'
 import { triInsertionExample } from './data/examples/triInsertion.js'
 import { triBulleExample } from './data/examples/triBulle.js'
 import { triFusionExample } from './data/examples/triFusion.js'
 import { listeInsertionExample } from './data/examples/listeInsertion.js'
+import { pileTableauExample } from './data/examples/pileTableau.js'
+import { fileTableauExample } from './data/examples/fileTableau.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -47,6 +50,8 @@ const EXAMPLE_ROUTES = {
   'exemples/tri-bulle': triBulleExample,
   'exemples/tri-fusion': triFusionExample,
   'exemples/liste-insertion': listeInsertionExample,
+  'exemples/pile-tableau': pileTableauExample,
+  'exemples/file-tableau': fileTableauExample,
 }
 
 const reasons = [
@@ -88,7 +93,9 @@ export default function App() {
     <ExampleViewer example={example}>
       {example.id === 'liste-insertion'
         ? <LinkedListVisualizer frames={example.frames} />
-        : <SortExampleVisualizer frames={example.frames} />}
+        : example.id === 'pile-tableau' || example.id === 'file-tableau'
+          ? <StackQueueVisualizer example={example} />
+          : <SortExampleVisualizer frames={example.frames} />}
     </ExampleViewer>
   )
 
