@@ -4,7 +4,7 @@ Interactive educational website for SupNum second-year students learning data st
 
 ## Version
 
-`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 20 — Sorting examples`
+`v1.3.0 — Interactive Practice Mode` → `v1.4 Gate 21 — Linked list example`
 
 ## Stack
 
@@ -39,17 +39,19 @@ Resources are served statically by Vercel from the `public/resources` folder.
 All practice pages: hints, hidden solutions, explanations, chapter links.
 No auto-correction, no backend, no progress saving.
 
-### Interactive Examples Lab (Gate 20 — v1.4 sorting examples)
+### Interactive Examples Lab (Gate 21 — v1.4 linked list example)
 
-- **Examples catalog** — 8 examples, category filter, 4 active / 4 coming-soon — `#/exemples`
+- **Examples catalog** — 8 examples, category filter, 5 active / 3 coming-soon — `#/exemples`
+- **Sorting examples** — 4 active step-by-step examples
 - **Tri sélection** — step-by-step bar chart visualizer on `{1,5,3,9,0}` — `#/exemples/tri-selection`
 - **Tri insertion** — step-by-step visualizer on `{1,5,3,9,0}` — `#/exemples/tri-insertion`
 - **Tri à bulles** — step-by-step visualizer on `{7,3,1,5,2}` — `#/exemples/tri-bulle`
 - **Tri fusion** — step-by-step visualizer on `{38,27,43,3,9,82,10}` — `#/exemples/tri-fusion`
+- **Liste chaînée — insertion en fin** — pointer-based step-by-step visualizer on `2 → 6 → 4 → 9` — `#/exemples/liste-insertion`
 
 No code runner, no compiler, no backend, no progress saving. Watch-only step-by-step lessons.
 
-Coming soon: liste chaînée, pile, file, ABR.
+Coming soon: pile, file, ABR/arbre.
 
 ### Other pages
 

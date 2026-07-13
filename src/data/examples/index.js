@@ -42,7 +42,7 @@ export const exampleItems = [
     badge: 'Liste',
     description: 'Regarde les nœuds se chaîner un à un, avec les pointeurs next qui se mettent à jour.',
     route: '#/exemples/liste-insertion',
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'pile-tableau',
