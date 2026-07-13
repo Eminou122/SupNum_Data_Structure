@@ -42,8 +42,8 @@ export default function LinkedListVisualizer({ frames }) {
                   <div className="relative">
                     <div className="absolute -top-7 left-1/2 flex -translate-x-1/2 gap-1 font-mono text-xs font-black">
                       {index === 0 && <span className="text-primary">head</span>}
-                      {isActive && <span className="text-coral">current</span>}
-                      {isNew && <span className="text-success">new</span>}
+                      {isActive && <span className="text-ink">current</span>}
+                      {isNew && <span className="text-ink">new</span>}
                     </div>
                     <div className={`min-w-16 rounded-lg border-[3px] border-ink px-5 py-4 text-center font-mono text-xl font-black shadow-hardSm ${isNew ? 'bg-success' : isActive ? 'bg-accent' : 'bg-white'}`}>
                       {node.val}
