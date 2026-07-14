@@ -56,8 +56,8 @@ export default function ExamensPage() {
             Tests &amp; examens
           </h1>
           <p className="mt-4 max-w-3xl text-lg font-semibold leading-8">
-            Consulte quatre sujets originaux de SupNum pour préparer tes révisions. Les fiches
-            guidées seront ajoutées plus tard, après vérification attentive de chaque sujet.
+            Consulte quatre sujets originaux de SupNum pour préparer tes révisions. Une première
+            fiche guidée est disponible ; les autres seront ajoutées après vérification.
           </p>
         </div>
 
@@ -109,14 +109,24 @@ export default function ExamensPage() {
                 <h2 className="mt-4 font-mono text-xl font-black leading-tight">{paper.title}</h2>
                 <p className="mt-3 font-mono text-sm font-black">{paper.duration}</p>
                 <p className="mt-3 flex-1 text-sm font-semibold leading-6">{paper.description}</p>
-                <a
-                  href={paper.sourceUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg border-[3px] border-ink bg-coral px-4 py-2 text-center font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
-                >
-                  Ouvrir le PDF original →
-                </a>
+                <div className="mt-5 grid gap-3">
+                  {paper.guidedStatus === 'available' && (
+                    <a
+                      href={paper.guidedUrl}
+                      className="inline-flex min-h-11 items-center justify-center rounded-lg border-[3px] border-ink bg-success px-4 py-2 text-center font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+                    >
+                      Voir la révision guidée →
+                    </a>
+                  )}
+                  <a
+                    href={paper.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-11 items-center justify-center rounded-lg border-[3px] border-ink bg-coral px-4 py-2 text-center font-mono text-sm font-black shadow-hardSm outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-primary"
+                  >
+                    Ouvrir le PDF original →
+                  </a>
+                </div>
               </article>
             ))}
           </div>

@@ -7,6 +7,8 @@ export const examPapers = [
     badge: 'Test',
     duration: 'Durée indiquée sur le sujet : 1 h 30',
     sourceUrl: '/resources/exams/test-2024-2025.pdf',
+    guidedUrl: '#/examens/test-2024-2025',
+    guidedStatus: 'available',
     hasCorrection: false,
     description: 'Pointeurs, complexité et liste doublement chaînée circulaire.',
   },

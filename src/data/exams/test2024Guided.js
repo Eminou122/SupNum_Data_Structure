@@ -1,0 +1,100 @@
+export const test2024Guided = {
+  id: 'test-2024-2025',
+  title: 'Test 2024–2025 — révision guidée',
+  badge: 'Test • Révision guidée',
+  sourceUrl: '/resources/exams/test-2024-2025.pdf',
+  sourceLabel: 'PDF original',
+  officialCorrection: false,
+  intro: 'Cette aide de révision est basée sur le sujet original et explique une méthode de résolution vérifiable.',
+  exercises: [
+    {
+      id: 'ex-01',
+      title: 'Exercice 1 — Suivre les pointeurs',
+      topic: 'Pointeurs et structures',
+      relatedChapters: [
+        { label: 'Chapitre 4 — Pointeurs & structures', href: '#/chapitre-4-pointeurs-structures' },
+      ],
+      relatedExamples: [],
+      promptSummary: 'Suivre un programme C++ qui manipule deux entiers, deux pointeurs et une structure étudiant, puis déterminer les valeurs affichées.',
+      whatTheyWant: 'Vérifier que tu sais distinguer une variable, son adresse, la valeur pointée et les deux écritures d’accès aux champs d’une structure.',
+      method: [
+        'Écris les valeurs initiales de x et y, puis note la cible de ptrx et de ptry.',
+        'Lis chaque affichage de gauche à droite en remplaçant les déréférencements par leur valeur.',
+        'Après ptrx = ptry, redessine les flèches avant de traiter l’affectation suivante.',
+        'Termine avec un tableau donnant les valeurs finales de x et y.',
+      ],
+      guidedCorrection: [
+        'Au départ, ptrx pointe vers x qui vaut 5 et ptry pointe vers y qui vaut 8.',
+        'eptr->matricule lit le matricule et (*eptr).nom lit le nom du même objet étudiant ; les syntaxes -> et (*pointeur). servent toutes deux à accéder à ses champs.',
+        'Après ptrx = ptry, les deux pointeurs désignent y. L’écriture *ptrx = 12 modifie donc y, pas x.',
+        'À la fin, x vaut encore 5 et y vaut 12. Reprends le PDF pour respecter exactement les libellés du cout.',
+      ],
+      traps: [
+        'Confondre l’adresse stockée dans un pointeur avec la valeur obtenue par *pointeur.',
+        'Croire que ptrx = ptry copie la valeur de y dans x : cette instruction copie une adresse.',
+        'Oublier que -> et (*pointeur). désignent le même champ.',
+      ],
+    },
+    {
+      id: 'ex-02',
+      title: 'Exercice 2 — Compter les exécutions',
+      topic: 'Complexité',
+      relatedChapters: [
+        { label: 'Chapitre 2 — Complexité', href: '#/chapitre-2-complexite' },
+      ],
+      relatedExamples: [],
+      promptSummary: 'Compter, en fonction de n, combien de fois le cout placé dans deux boucles imbriquées est exécuté.',
+      whatTheyWant: 'Reconnaître que la boucle interne ne fait pas n tours fixes : elle va de 1 jusqu’à la valeur courante de i.',
+      method: [
+        'Pour une valeur de i, compte le nombre de valeurs prises par j.',
+        'Écris la somme obtenue pour i allant de 1 à n.',
+        'Remplace cette somme par sa formule fermée.',
+        'Déduis ensuite l’ordre de grandeur si une complexité est demandée.',
+      ],
+      guidedCorrection: [
+        'Pour i = 1, le cout est exécuté 1 fois ; pour i = 2, il est exécuté 2 fois ; et ainsi de suite jusqu’à n.',
+        'Le total est donc 1 + 2 + … + n.',
+        'Cette somme vaut n(n + 1) / 2 exécutions.',
+        'Son terme dominant est proportionnel à n² : la complexité est Θ(n²).',
+      ],
+      traps: [
+        'Répondre directement n² sans donner le nombre exact d’exécutions demandé.',
+        'Compter n tours pour la boucle interne quelle que soit la valeur de i.',
+        'Ajouter les tests et incréments alors que la question vise seulement l’instruction cout.',
+      ],
+    },
+    {
+      id: 'ex-03',
+      title: 'Exercice 3 — Liste circulaire doublement chaînée',
+      topic: 'Listes chaînées',
+      relatedChapters: [
+        { label: 'Chapitre 4 — Pointeurs & structures', href: '#/chapitre-4-pointeurs-structures' },
+      ],
+      relatedExamples: [
+        { label: 'Exemple — Liste chaînée, insertion', href: '#/exemples/liste-insertion' },
+      ],
+      promptSummary: 'Représenter une liste triée, circulaire et doublement chaînée, puis décrire l’insertion, la suppression par position et un comptage qui ne parcourt que la moitié de la liste.',
+      whatTheyWant: 'Vérifier que tu maintiens ensemble les liens suivant/précédent, la tête, le milieu, l’ordre croissant et l’information de parité.',
+      method: [
+        'Définis un nœud avec valeur, suivant et précédent, puis une liste avec tête, milieu et un booléen estPair.',
+        'Écris les invariants avant les fonctions : tête->précédent est le dernier et dernier->suivant est la tête.',
+        'Pour insérer, trouve la première valeur supérieure ou égale, puis raccorde le nouveau nœud entre son précédent et son suivant.',
+        'Traite séparément la liste vide, l’insertion avant la tête, le singleton et la suppression de la tête.',
+        'Choisis et annonce une convention pour le milieu quand la taille est paire, puis applique-la après chaque modification.',
+      ],
+      guidedCorrection: [
+        'Deux structures suffisent : Noeud contient la valeur et les deux liens ; Liste contient tête, milieu et estPair.',
+        'Une insertion locale modifie quatre liens : précédent->suivant, nouveau->précédent, nouveau->suivant et suivant->précédent.',
+        'Une suppression relie directement le précédent au suivant, met à jour la tête si nécessaire, puis libère le nœud.',
+        'Après insertion ou suppression, inverse estPair et déplace milieu selon la convention annoncée et le côté modifié.',
+        'Avec le milieu gauche pour une taille paire, si k nœuds sont comptés de la tête au milieu inclus, la taille vaut 2k si elle est paire et 2k − 1 sinon.',
+      ],
+      traps: [
+        'Mettre à jour seulement les liens suivant et casser le parcours dans le sens précédent.',
+        'Oublier les cas liste vide, singleton ou suppression de la tête.',
+        'Modifier la liste sans rétablir l’ordre croissant, le milieu et la parité.',
+        'Donner une règle pour le milieu sans préciser la convention utilisée lorsque la taille est paire.',
+      ],
+    },
+  ],
+}

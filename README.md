@@ -6,7 +6,7 @@ Interactive educational website for SupNum second-year students learning data st
 
 `v1.4.0 — Interactive Examples Lab`
 
-Current development gate: `v1.5 Gate 25 — Tests & Exams catalog foundation`.
+Current development gate: `v1.5 Gate 26 — first guided paper page`.
 This is not the final v1.5 release.
 
 ## Stack
@@ -61,21 +61,23 @@ No code runner, no compiler, no backend, no progress saving. Watch-only step-by-
 
 All 8 planned examples are active in v1.4.0.
 
-### Tests & Exams catalog (v1.5 Gate 25)
+### Tests & Exams revision (v1.5 Gates 25–26)
 
 - **Catalog** — 4 original SupNum papers — `#/examens`
 - **Tests** — 2 original papers
 - **Exams** — 2 original papers
 - **PDF sources** — `public/resources/exams/`
+- **Guided revision** — Test 2024–2025 — `#/examens/test-2024-2025`
 
-No correction pages are available yet, and no official solution is claimed.
+One guided revision page is available. It is an educational explanation based on the source,
+not a correction supplied by the school. The other three papers remain source-only.
 There is no timer, scoring, backend, authentication, database, or progress saving.
 
 ### Other pages
 
 - **Playground** — interactive SortingRace — `#/playground`
 - **TD/TP catalog** — 6 items, filters, expandable cards, download links — `#/td-tp`
-- **Tests & Exams** — 4 original papers with type filters and PDF links — `#/examens`
+- **Tests & Exams** — 4 original papers and one guided revision page — `#/examens`
 - **Resources** — all course/TD/TP files as direct download links — `#/ressources`
 
 ### Routing
@@ -130,6 +132,7 @@ Open `http://localhost:5173` in your browser.
 - TP 2/3 practice: `http://localhost:5173/#/pratique/tp-2-3-piles-files`
 - TP Tri practice: `http://localhost:5173/#/pratique/tp-tri`
 - Examens: `http://localhost:5173/#/examens`
+- Guided Test 2024–2025: `http://localhost:5173/#/examens/test-2024-2025`
 - Resources: `http://localhost:5173/#/ressources`
 
 ## Repository

@@ -8,6 +8,7 @@ import ResourcesPage from './components/ResourcesPage.jsx'
 import PracticePage from './components/PracticePage.jsx'
 import ExamplesPage from './components/ExamplesPage.jsx'
 import ExampleViewer from './components/ExampleViewer.jsx'
+import ExamViewer from './components/ExamViewer.jsx'
 import SortExampleVisualizer from './components/SortExampleVisualizer.jsx'
 import LinkedListVisualizer from './components/LinkedListVisualizer.jsx'
 import StackQueueVisualizer from './components/StackQueueVisualizer.jsx'
@@ -20,6 +21,7 @@ import { listeInsertionExample } from './data/examples/listeInsertion.js'
 import { pileTableauExample } from './data/examples/pileTableau.js'
 import { fileTableauExample } from './data/examples/fileTableau.js'
 import { abrInsertionExample } from './data/examples/abrInsertion.js'
+import { test2024Guided } from './data/exams/test2024Guided.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -55,6 +57,10 @@ const EXAMPLE_ROUTES = {
   'exemples/pile-tableau': pileTableauExample,
   'exemples/file-tableau': fileTableauExample,
   'exemples/abr-insertion': abrInsertionExample,
+}
+
+const EXAM_ROUTES = {
+  'examens/test-2024-2025': test2024Guided,
 }
 
 const reasons = [
@@ -104,6 +110,9 @@ export default function App() {
             : <SortExampleVisualizer frames={example.frames} />}
     </ExampleViewer>
   )
+
+  const examPaper = slug ? EXAM_ROUTES[slug] : null
+  if (examPaper) return <ExamViewer paper={examPaper} />
 
   if (slug === 'exemples') return <ExamplesPage />
   if (slug === 'playground') return <PlaygroundPage />
