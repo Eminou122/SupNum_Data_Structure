@@ -22,6 +22,7 @@ import { pileTableauExample } from './data/examples/pileTableau.js'
 import { fileTableauExample } from './data/examples/fileTableau.js'
 import { abrInsertionExample } from './data/examples/abrInsertion.js'
 import { test2024Guided } from './data/exams/test2024Guided.js'
+import { test2023Guided } from './data/exams/test2023Guided.js'
 import { td01Practice } from './data/practice/td01.js'
 import { tdRevisionPractice } from './data/practice/tdRevision.js'
 import { tp1ListesPractice } from './data/practice/tp1Listes.js'
@@ -61,6 +62,7 @@ const EXAMPLE_ROUTES = {
 
 const EXAM_ROUTES = {
   'examens/test-2024-2025': test2024Guided,
+  'examens/test-2023-2024': test2023Guided,
 }
 
 const reasons = [
