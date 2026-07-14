@@ -6,6 +6,9 @@ Interactive educational website for SupNum second-year students learning data st
 
 `v1.4.0 — Interactive Examples Lab`
 
+Current development gate: `v1.5 Gate 25 — Tests & Exams catalog foundation`.
+This is not the final v1.5 release.
+
 ## Stack
 
 - Vite
@@ -58,11 +61,21 @@ No code runner, no compiler, no backend, no progress saving. Watch-only step-by-
 
 All 8 planned examples are active in v1.4.0.
 
+### Tests & Exams catalog (v1.5 Gate 25)
+
+- **Catalog** — 4 original SupNum papers — `#/examens`
+- **Tests** — 2 original papers
+- **Exams** — 2 original papers
+- **PDF sources** — `public/resources/exams/`
+
+No correction pages are available yet, and no official solution is claimed.
+There is no timer, scoring, backend, authentication, database, or progress saving.
+
 ### Other pages
 
 - **Playground** — interactive SortingRace — `#/playground`
 - **TD/TP catalog** — 6 items, filters, expandable cards, download links — `#/td-tp`
-- **Examens** — honest coming-soon placeholder — `#/examens`
+- **Tests & Exams** — 4 original papers with type filters and PDF links — `#/examens`
 - **Resources** — all course/TD/TP files as direct download links — `#/ressources`
 
 ### Routing
@@ -75,6 +88,7 @@ Hash-based routing — no router dependency.
 public/resources/courses/   — Course slides and PDFs (Chapitres 1–4)
 public/resources/tds/       — TD PDFs (TD-01, TD-Revision)
 public/resources/tps/       — TP PDFs and C++ source skeletons
+public/resources/exams/     — Original test and exam PDFs
 ```
 
 ## Filename mapping (renamed for web safety)
@@ -89,6 +103,10 @@ public/resources/tps/       — TP PDFs and C++ source skeletons
 | `TD-Révision.pdf` | `TD-Revision.pdf` |
 | `TP 1.pdf` | `TP-1.pdf` |
 | `listechaine.txt.txt` | `listechaine.txt` |
+| Tests `2024-2025.pdf` | `test-2024-2025.pdf` |
+| Tests `2023-2024.pdf` | `test-2023-2024.pdf` |
+| Exams `2024-2025.pdf` | `exam-2024-2025.pdf` |
+| Exams `2023-2024 (1).pdf` | `exam-2023-2024.pdf` |
 
 ## Run locally
 

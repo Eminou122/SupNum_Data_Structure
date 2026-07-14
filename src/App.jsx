@@ -66,7 +66,7 @@ const roadmap = [
   ['Phase 1', 'Cours interactifs', 'Terminé'],
   ['Phase 2', 'TD / TP', 'Disponible'],
   ['Phase 3', "Labo d'exemples v1.4", 'Terminé'],
-  ['Phase 4', 'Examens corrigés', 'Bientôt'],
+  ['Phase 4', 'Tests & examens', 'Disponible'],
 ]
 
 function getSlugFromHash() {
